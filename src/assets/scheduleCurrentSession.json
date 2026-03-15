@@ -1,5 +1,6 @@
 {
-  "races": [
+  "races": 
+  [
     {
       "round_number": 1,
       "race_name": "Australian Grand Prix",
@@ -34,18 +35,40 @@
         }
       ]
     },
-    {
-      "round_number": 2,
-      "race_name": "Chinese Grand Prix",
-      "country": "China",
-      "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/china-flag.png",
-      "circuit": "Shanghai",
-      "circuit_image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/f_auto/q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/China_Circuit.png",
-      "date": "2026-03-15",
-      "session_name": "Race",
-      "is_completed": false,
-      "top_three": []
-    },
+  {
+    "round_number": 2,
+    "race_name": "Chinese Grand Prix",
+    "country": "China",
+    "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/china-flag.png",
+    "circuit": "Shanghai",
+    "circuit_image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/f_auto/q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/China_Circuit.png",
+    "date": "2026-03-15",
+    "session_name": "Race",
+    "is_completed": true,
+    "top_three": [
+      {
+        "position": 2,
+        "driver_name": "George Russell",
+        "team": "Mercedes",
+        "driver_image": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2025/georus01.png",
+        "abbreviation": "RUS"
+      },
+      {
+        "position": 1,
+        "driver_name": "Kimi Antonelli",
+        "team": "Mercedes",
+        "driver_image": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2025/kimant01.png",
+        "abbreviation": "ANT"
+      },
+      {
+        "position": 3,
+        "driver_name": "Lewis Hamilton",
+        "team": "Ferrari",
+        "driver_image": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2025/lewham01.png",
+        "abbreviation": "HAM"
+      }
+    ]
+  },
     {
       "round_number": 3,
       "race_name": "Japanese Grand Prix",

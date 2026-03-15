@@ -1,103 +1,45 @@
-import { useState, useEffect } from 'react';
+import { useReducer, useEffect } from "react";
+import {
+  sessionReducer,
+  initialState,
+  ACTIONS,
+  getUniqueRaces,
+  getAvailableSessions,
+} from "../reducers/sessionReducer";
 
 export default function Session() {
-  const [selectedYear, setSelectedYear] = useState(2026);
-  const [selectedRace, setSelectedRace] = useState(null);
-  const [selectedSession, setSelectedSession] = useState('Qualifying');
-  const [sessionResults, setSessionResults] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [races, setRaces] = useState([]);
-  const [teamColors, setTeamColors] = useState({});
+  const [state, dispatch] = useReducer(sessionReducer, initialState);
+
+  const {
+    selectedYear,
+    selectedRace,
+    selectedSession,
+    sessionResults,
+    isLoading,
+    races,
+    teamColors,
+  } = state;
 
   useEffect(() => {
-    window.scrollTo({top: 0, behavior: 'smooth'});
+    window.scrollTo({ top: 0, behavior: "smooth" });
     loadYearData(selectedYear);
   }, [selectedYear]);
 
   const loadYearData = async (year) => {
-    setIsLoading(true);
-    
+    dispatch({ type: ACTIONS.SET_LOADING, payload: true });
     try {
-      // Dynamically import the JSON file for the selected year
       const sessionData = await import(`../assets/session${year}.json`);
-      
-      setRaces(sessionData.races || []);
-      setTeamColors(sessionData.teamColors || {});
-      
-      if (sessionData.races && sessionData.races.length > 0) {
-        // Get unique races (group by round_number)
-        const uniqueRaces = getUniqueRaces(sessionData.races);
-        setSelectedRace(uniqueRaces[0]);
-        
-        // Load initial session results
-        updateSessionResults(uniqueRaces[0], 'Qualifying', sessionData.races);
-      } else {
-        setSelectedRace(null);
-        setSessionResults([]);
-      }
+      dispatch({
+        type: ACTIONS.SET_YEAR_DATA,
+        payload: {
+          races: sessionData.races || [],
+          teamColors: sessionData.teamColors || {},
+        },
+      });
     } catch (error) {
       console.error(`Error loading data for year ${year}:`, error);
-      setRaces([]);
-      setTeamColors({});
-      setSelectedRace(null);
-      setSessionResults([]);
-    } finally {
-      setIsLoading(false);
+      dispatch({ type: ACTIONS.SET_YEAR_ERROR });
     }
-  };
-
-  // Get unique races (group by round_number)
-  const getUniqueRaces = (racesData = races) => {
-    if (!racesData || racesData.length === 0) return [];
-    
-    const uniqueRacesMap = new Map();
-    racesData.forEach(race => {
-      if (!uniqueRacesMap.has(race.round_number)) {
-        uniqueRacesMap.set(race.round_number, race);
-      }
-    });
-    return Array.from(uniqueRacesMap.values()).sort((a, b) => a.round_number - b.round_number);
-  };
-
-  // Get available sessions for a specific race
-  const getAvailableSessions = (race) => {
-    if (!race || !races) return [];
-    return races
-      .filter(r => r.round_number === race.round_number)
-      .map(r => r.session_name)
-      .filter((session, index, array) => array.indexOf(session) === index); // Remove duplicates
-  };
-
-  // Update session results when race or session type changes
-  const updateSessionResults = (race, sessionType, racesData = races) => {
-    if (!race || !racesData) return;
-    
-    const session = racesData.find(r => 
-      r.round_number === race.round_number && 
-      r.session_name === sessionType
-    );
-    
-    if (session && session.results) {
-      const sortedResults = [...session.results].sort((a, b) => 
-        a.Position - b.Position
-      );
-      setSessionResults(sortedResults);
-    } else {
-      setSessionResults([]);
-    }
-  };
-
-  const handleRaceSelect = (race) => {
-    setSelectedRace(race);
-    const availableSessions = getAvailableSessions(race);
-    const newSession = availableSessions.includes(selectedSession) ? selectedSession : availableSessions[0] || 'Race';
-    setSelectedSession(newSession);
-    updateSessionResults(race, newSession);
-  };
-
-  const handleSessionSelect = (sessionType) => {
-    setSelectedSession(sessionType);
-    updateSessionResults(selectedRace, sessionType);
   };
 
   if (isLoading) {
@@ -105,43 +47,60 @@ export default function Session() {
       <div className="flex items-center justify-center h-screen">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500 mx-auto"></div>
-          <p className="mt-4 text-lg font-medium">Loading {selectedYear} data...</p>
+          <p className="mt-4 text-lg font-medium">
+            Loading {selectedYear} data...
+          </p>
         </div>
       </div>
     );
   }
 
-  const uniqueRaces = getUniqueRaces();
-  const availableSessions = selectedRace ? getAvailableSessions(selectedRace) : [];
+  const uniqueRaces = getUniqueRaces(races);
+  const availableSessions = selectedRace
+    ? getAvailableSessions(selectedRace, races)
+    : [];
 
   return (
     <div className="p-4">
       <div className="flex justify-between items-center mb-6">
-        <h2 className="text-4xl font-bold italic text-center">{selectedYear} Season</h2>
-        <select 
+        <h2 className="text-4xl font-bold italic text-center">
+          {selectedYear} Season
+        </h2>
+        <select
           value={selectedYear}
-          onChange={(e) => setSelectedYear(Number(e.target.value))}
+          onChange={(e) =>
+            dispatch({
+              type: ACTIONS.SET_YEAR,
+              payload: Number(e.target.value),
+            })
+          }
           className="px-4 py-2 rounded-lg border border-gray-300"
         >
-          {[2026, 2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018].map(year => (
-            <option key={year} value={year}>{year}</option>
-          ))}
+          {[2026, 2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018].map(
+            (year) => (
+              <option key={year} value={year}>
+                {year}
+              </option>
+            )
+          )}
         </select>
       </div>
 
-      {/* Race selector */}
       {uniqueRaces.length > 0 ? (
         <>
+          {/* Race selector */}
           <div className="mb-8 overflow-x-auto">
             <div className="flex space-x-2 pb-2">
               {uniqueRaces.map((race) => (
                 <button
                   key={race.round_number}
-                  onClick={() => handleRaceSelect(race)}
+                  onClick={() =>
+                    dispatch({ type: ACTIONS.SELECT_RACE, payload: race })
+                  }
                   className={`px-4 py-2 rounded-lg whitespace-nowrap cursor-pointer ${
                     selectedRace?.round_number === race.round_number
-                      ? 'bg-red-600 text-white'
-                      : 'bg-gray-200 hover:bg-gray-300'
+                      ? "bg-red-600 text-white"
+                      : "bg-gray-200 hover:bg-gray-300"
                   }`}
                 >
                   {race.country} GP
@@ -158,11 +117,16 @@ export default function Session() {
                 {availableSessions.map((session) => (
                   <button
                     key={session}
-                    onClick={() => handleSessionSelect(session)}
+                    onClick={() =>
+                      dispatch({
+                        type: ACTIONS.SELECT_SESSION,
+                        payload: session,
+                      })
+                    }
                     className={`px-4 py-2 rounded-lg cursor-pointer ${
                       selectedSession === session
-                        ? 'bg-red-600 text-white'
-                        : 'bg-gray-200 hover:bg-gray-300'
+                        ? "bg-red-600 text-white"
+                        : "bg-gray-200 hover:bg-gray-300"
                     }`}
                   >
                     {session}
@@ -175,12 +139,14 @@ export default function Session() {
           {/* Selected race details */}
           {selectedRace && (
             <div className="mb-8 bg-white p-4 rounded-lg shadow-md">
-              <h3 className="text-2xl font-bold mb-2">{selectedRace.race_name}</h3>
+              <h3 className="text-2xl font-bold mb-2">
+                {selectedRace.race_name}
+              </h3>
               <div className="flex justify-center mb-4">
                 <img
                   src={selectedRace.circuit_image}
                   alt={selectedRace.circuit}
-                  style={{ width: '600px', height: '300px' }}
+                  style={{ width: "600px", height: "300px" }}
                   className="object-contain rounded"
                 />
               </div>
@@ -211,21 +177,23 @@ export default function Session() {
           {/* Session results */}
           {sessionResults.length > 0 && (
             <>
-              <h3 className="text-2xl font-bold mb-4">{selectedSession} Results</h3>
+              <h3 className="text-2xl font-bold mb-4">
+                {selectedSession} Results
+              </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                 {sessionResults.map((result) => (
-                  <div 
-                    key={`${result.DriverNumber}-${result.Position}`} 
-                    className="bg-white p-4 rounded-lg shadow-md" 
-                    style={{ 
+                  <div
+                    key={`${result.DriverNumber}-${result.Position}`}
+                    className="bg-white p-4 rounded-lg shadow-md"
+                    style={{
                       backgroundColor: `${teamColors[result.TeamName]}30`,
-                      borderLeft: `6px solid ${teamColors[result.TeamName]}`
+                      borderLeft: `6px solid ${teamColors[result.TeamName]}`,
                     }}
                   >
                     <div className="flex items-center justify-between mb-2">
                       <span className="font-bold text-lg">
-                        {typeof result.Position === 'number' 
-                          ? `P${result.Position}` 
+                        {typeof result.Position === "number"
+                          ? `P${result.Position}`
                           : result.Position}
                       </span>
                       {result.Points > 0 && (
@@ -235,7 +203,7 @@ export default function Session() {
                       )}
                     </div>
                     <h3 className="font-bold text-xl">{result.FullName}</h3>
-                    <p 
+                    <p
                       className="text-gray-600"
                       style={{ color: teamColors[result.TeamName] }}
                     >
@@ -244,15 +212,20 @@ export default function Session() {
                     <div className="mt-2 text-sm">
                       <p>Driver Number: {result.DriverNumber}</p>
                       <p>Driver Code: {result.Abbreviation}</p>
-                      {result.Status && result.Status !== 'Finished' && result.Status !== '' && (
-                        <p className={`mt-1 ${
-                          result.Status === 'Retired' || result.Status === 'Disqualified' 
-                            ? 'text-red-600' 
-                            : 'text-yellow-600'
-                        }`}>
-                          Status: {result.Status}
-                        </p>
-                      )}
+                      {result.Status &&
+                        result.Status !== "Finished" &&
+                        result.Status !== "" && (
+                          <p
+                            className={`mt-1 ${
+                              result.Status === "Retired" ||
+                              result.Status === "Disqualified"
+                                ? "text-red-600"
+                                : "text-yellow-600"
+                            }`}
+                          >
+                            Status: {result.Status}
+                          </p>
+                        )}
                     </div>
                   </div>
                 ))}
@@ -262,7 +235,9 @@ export default function Session() {
         </>
       ) : (
         <div className="text-center py-8">
-          <h3 className="text-xl font-bold text-gray-600">No data available for {selectedYear}</h3>
+          <h3 className="text-xl font-bold text-gray-600">
+            No data available for {selectedYear}
+          </h3>
           <p className="text-gray-500 mt-2">Please select a different year.</p>
         </div>
       )}
