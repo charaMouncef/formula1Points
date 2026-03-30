@@ -4,7 +4,66 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/F1.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>F1</title>
+
+    <!-- Primary SEO -->
+    <title>Formula 1 Points Tracker | F1 Standings, Race Results 2018–Present & Current Schedule</title>
+    <meta name="description" content="Track Formula 1 championship standings, race and qualifying results from 2018 through the current season, and the full F1 race calendar. Drivers' and constructors' points updated after every race." />
+    <meta name="keywords" content="Formula 1, F1, F1 standings, F1 points, Formula 1 standings current season, drivers championship, constructors championship, F1 race results, F1 results 2018, F1 results 2019, F1 results 2020, F1 results 2021, F1 results 2022, F1 results 2023, F1 results 2024, F1 results 2025, F1 current season, F1 schedule, F1 qualifying results, Formula 1 tracker, F1 points tracker, grand prix results, F1 season calendar, F1 archive" />
+    <meta name="author" content="Mouncef" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://formula1points.netlify.app/" />
+
+    <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://formula1points.netlify.app/" />
+    <meta property="og:title" content="Formula 1 Points Tracker | F1 Standings & Race Results" />
+    <meta property="og:description" content="Track live F1 championship standings, full race and qualifying results archive from 2018 through the current season, and the complete F1 race schedule — all in one place." />
+    <meta property="og:image" content="https://formula1points.netlify.app/F1.png" />
+    <meta property="og:site_name" content="Formula 1 Points Tracker" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://formula1points.netlify.app/" />
+    <meta name="twitter:title" content="Formula 1 Points Tracker | F1 Standings & Race Results" />
+    <meta name="twitter:description" content="Track live F1 championship standings, full race and qualifying results archive from 2018 through the current season, and the complete F1 race schedule." />
+    <meta name="twitter:image" content="https://formula1points.netlify.app/F1.png" />
+
+    <!-- JSON-LD Structured Data (year injected dynamically below) -->
+    <script id="ld-json" type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Formula 1 Points Tracker",
+      "url": "https://formula1points.netlify.app",
+      "description": "Track Formula 1 championship standings, race and qualifying results from 2018 through the current season, and the full F1 race calendar.",
+      "applicationCategory": "SportsApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+
+    <!-- Inject current year into title and JSON-LD at runtime -->
+    <script>
+      (function () {
+        const year = new Date().getFullYear();
+
+        // Update page title with real current year
+        document.title = `Formula 1 Points Tracker | F1 Standings, Race Results 2018\u2013${year} & Schedule`;
+
+        // Update JSON-LD description with real current year
+        const ldScript = document.getElementById("ld-json");
+        if (ldScript) {
+          const data = JSON.parse(ldScript.textContent);
+          data.description = `Track Formula 1 championship standings, race and qualifying results from 2018 through the ${year} season, and the full ${year} F1 race calendar.`;
+          ldScript.textContent = JSON.stringify(data, null, 2);
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
