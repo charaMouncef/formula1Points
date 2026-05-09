@@ -1,4 +1,4 @@
-import { useReducer, useEffect } from "react";
+import { useReducer, useEffect, useState } from "react";
 import {
   LineChart,
   Line,
@@ -10,6 +10,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import { sessionReducer, initialState, ACTIONS } from "../reducers/currentSessionReducer";
+import AnimatedSection from "../Components/AnimatedSection";
 
 const CustomTooltip = ({ payload, label }) => {
   return (
@@ -30,6 +31,8 @@ const CustomTooltip = ({ payload, label }) => {
 
 export default function CurrentSession() {
   const [state, dispatch] = useReducer(sessionReducer, initialState);
+  const [expandedDriver, setExpandedDriver] = useState(null);
+  const [expandedConstructor, setExpandedConstructor] = useState(null);
 
   const {
     isLoading,
@@ -61,6 +64,31 @@ export default function CurrentSession() {
     };
   }, [selectDriver, selectConstructor]);
 
+  const handleDriverClick = (driver) => {
+    if (expandedDriver?.abbreviation === driver.abbreviation) {
+      dispatch({ type: ACTIONS.SELECT_DRIVER, payload: driver });
+    } else {
+      setExpandedDriver(driver);
+      setExpandedConstructor(null);
+    }
+  };
+
+  const handleConstructorClick = (team) => {
+    if (expandedConstructor?.name === team.name) {
+      dispatch({ type: ACTIONS.SELECT_CONSTRUCTOR, payload: team });
+    } else {
+      setExpandedConstructor(team);
+      setExpandedDriver(null);
+    }
+  };
+
+  const clearAll = () => {
+    dispatch({ type: ACTIONS.CLEAR_DRIVER });
+    dispatch({ type: ACTIONS.CLEAR_CONSTRUCTOR });
+    setExpandedDriver(null);
+    setExpandedConstructor(null);
+  };
+
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-screen">
@@ -73,53 +101,59 @@ export default function CurrentSession() {
   }
 
   return (
-    <div className="p-4 ">
-      <h2 className="text-4xl font-bold italic text-center my-2">
-        Current Season {new Date().getFullYear()}
-      </h2>
+    <div className="p-4">
+      <AnimatedSection>
+        <h2 className="text-4xl font-bold italic text-center my-2">
+          Current Season {new Date().getFullYear()}
+        </h2>
+      </AnimatedSection>
 
       {/* Driver Championship Section */}
       <div>
-        <h2 className="text-2xl font-medium italic pl-4 my-2">
-          Driver Championship Progress
-        </h2>
-        <div className="bg-white p-4 rounded-lg shadow mb-8">
-          <ResponsiveContainer width="100%" height={500}>
-            <LineChart
-              data={driverChartData}
-              margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
-            >
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="event" />
-              <YAxis />
-              <Tooltip content={<CustomTooltip />} />
-              <Legend />
-              {driverStandings.map((driver) => (
-                <Line
-                  key={driver.abbreviation}
-                  type="monotone"
-                  dataKey={driver.abbreviation}
-                  stroke={teamColors[driver.team]}
-                  strokeWidth={2}
-                  activeDot={{ r: 6 }}
-                  connectNulls={true}
-                />
-              ))}
-            </LineChart>
-          </ResponsiveContainer>
-        </div>
+        <AnimatedSection>
+          <h2 className="text-2xl font-medium italic pl-4 my-2">
+            Driver Championship Progress
+          </h2>
+        </AnimatedSection>
+        <AnimatedSection>
+          <div className="bg-white p-4 rounded-lg shadow mb-8">
+            <ResponsiveContainer width="100%" height={500}>
+              <LineChart
+                data={driverChartData}
+                margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+              >
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="event" />
+                <YAxis />
+                <Tooltip content={<CustomTooltip />} />
+                <Legend />
+                {driverStandings.map((driver) => (
+                  <Line
+                    key={driver.abbreviation}
+                    type="monotone"
+                    dataKey={driver.abbreviation}
+                    stroke={teamColors[driver.team]}
+                    strokeWidth={2}
+                    activeDot={{ r: 6 }}
+                    connectNulls={true}
+                  />
+                ))}
+              </LineChart>
+            </ResponsiveContainer>
+          </div>
+        </AnimatedSection>
 
-        <h2 className="text-2xl font-medium italic pl-4 my-2">
-          Driver Standings
-        </h2>
-        <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-4 p-4">
+        <AnimatedSection>
+          <h2 className="text-2xl font-medium italic pl-4 my-2">
+            Driver Standings
+          </h2>
+        </AnimatedSection>
+        <div className="columns-1 md:columns-2 lg:columns-4 xl:columns-5 gap-6 p-4">
           {driverStandings.map((driver) => (
             <div
               key={driver.abbreviation}
-              className="p-4 rounded-lg shadow-md bg-white cursor-pointer hover:scale-[1.02] transition-transform"
-              onClick={() =>
-                dispatch({ type: ACTIONS.SELECT_DRIVER, payload: driver })
-              }
+              className="break-inside-avoid p-4 rounded-lg shadow-md bg-white cursor-pointer hover:scale-[1.02] transition-transform mb-4"
+              onClick={() => handleDriverClick(driver)}
               style={{
                 backgroundColor: `${teamColors[driver.team]}30`,
                 borderLeft: `6px solid ${teamColors[driver.team]}`,
@@ -138,103 +172,125 @@ export default function CurrentSession() {
                   {driver.totalPoints} pts
                 </span>
               </div>
-            </div>
-          ))}
 
-          {/* Driver Modal */}
-          {selectDriver && (
-            <div
-              className="fixed inset-0 bg-gray-500/50 backdrop-blur-sm z-50 flex justify-center items-center p-2"
-              onClick={() => dispatch({ type: ACTIONS.CLEAR_DRIVER })}
-            >
-              <div
-                className="w-full max-w-md max-h-[90vh] overflow-y-hidden bg-white rounded-lg shadow-xl py-2 px-6"
-                onClick={(e) => e.stopPropagation()}
-                style={{
-                  backgroundColor: `${teamColors[selectDriver.team]}30`,
-                  borderLeft: `6px solid ${teamColors[selectDriver.team]}`,
-                }}
-              >
-                <div className="flex justify-between items-center">
-                  <div>
-                    <h3 className="font-bold text-lg">
-                      #{selectDriver.position} / {selectDriver.full_name}
-                    </h3>
-                    <p className="text-sm md:text-base text-gray-600">
-                      {selectDriver.team}
-                    </p>
-                  </div>
-                  <span className="font-bold text-lg">
-                    {selectDriver.totalPoints} pts
-                  </span>
-                </div>
-                <hr className="my-3" />
-                <div className="mt-4">
-                  <p className="text-sm md:text-base font-bold">
-                    Race Results:
-                  </p>
-                  <ul className="mt-1 space-y-1">
-                    {selectDriver.races.slice(1).map((race, idx) => (
-                      <li
-                        key={`race-${idx}`}
-                        className="flex justify-between items-center text-xs md:text-sm"
-                      >
-                        <span className="truncate mr-4">{race.event}</span>
-                        <span className="font-semibold">
-                          +{race.points} pts
-                        </span>
+              {expandedDriver?.abbreviation === driver.abbreviation && (
+                <div className="mt-3 border-t pt-3 border-gray-300">
+                  <p className="text-sm font-bold">Last 3 Race Results:</p>
+                  <ul className="text-xs space-y-1 mt-1">
+                    {driver.races.slice(-3).map((race, idx) => (
+                      <li key={idx} className="flex justify-between items-center py-1">
+                        <span className="truncate mr-2">{race.event}</span>
+                        <span className="font-semibold">+{race.points} pts</span>
                       </li>
                     ))}
                   </ul>
+                  <p className="text-xs text-gray-400 mt-2">Click again for all results</p>
                 </div>
+              )}
+            </div>
+          ))}
+        </div>
+
+        {/* Driver Modal */}
+        {selectDriver && (
+          <div
+            className="fixed inset-0 bg-gray-500/50 backdrop-blur-sm z-50 flex justify-center items-center p-2"
+            onClick={() => {
+              dispatch({ type: ACTIONS.CLEAR_DRIVER });
+              setExpandedDriver(null);
+            }}
+          >
+            <div
+              className="w-full max-w-md max-h-[90vh] overflow-y-auto bg-white rounded-lg shadow-xl py-2 px-6"
+              onClick={(e) => e.stopPropagation()}
+              style={{
+                backgroundColor: `${teamColors[selectDriver.team]}30`,
+                borderLeft: `6px solid ${teamColors[selectDriver.team]}`,
+              }}
+            >
+              <div className="flex justify-between items-center sticky top-0 bg-inherit py-2">
+                <div>
+                  <h3 className="font-bold text-lg">
+                    #{selectDriver.position} / {selectDriver.full_name}
+                  </h3>
+                  <p className="text-sm md:text-base text-gray-600">
+                    {selectDriver.team}
+                  </p>
+                </div>
+                <span className="font-bold text-lg">
+                  {selectDriver.totalPoints} pts
+                </span>
+              </div>
+              <hr className="my-3" />
+              <div className="mt-4">
+                <p className="text-sm md:text-base font-bold">
+                  All Race Results:
+                </p>
+                <ul className="mt-1 space-y-1">
+                  {selectDriver.races.slice(1).map((race, idx) => (
+                    <li
+                      key={`race-${idx}`}
+                      className="flex justify-between items-center text-xs md:text-sm"
+                    >
+                      <span className="truncate mr-4">{race.event}</span>
+                      <span className="font-semibold">
+                        +{race.points} pts
+                      </span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
-          )}
-        </div>
+          </div>
+        )}
       </div>
 
       {/* Constructor Championship Section */}
       <div className="mt-12">
-        <h2 className="text-2xl font-medium italic pl-4 my-2">
-          Constructor Championship Progress
-        </h2>
-        <div className="bg-white p-4 rounded-lg shadow mb-8">
-          <ResponsiveContainer width="100%" height={500}>
-            <LineChart
-              data={constructorChartData}
-              margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
-            >
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="event" />
-              <YAxis />
-              <Tooltip content={<CustomTooltip />} />
-              <Legend />
-              {constructorStandings.map((team) => (
-                <Line
-                  key={team.name}
-                  type="monotone"
-                  dataKey={team.name}
-                  stroke={teamColors[team.name] || "#8884d8"}
-                  strokeWidth={2}
-                  activeDot={{ r: 6 }}
-                  connectNulls={true}
-                />
-              ))}
-            </LineChart>
-          </ResponsiveContainer>
-        </div>
+        <AnimatedSection>
+          <h2 className="text-2xl font-medium italic pl-4 my-2">
+            Constructor Championship Progress
+          </h2>
+        </AnimatedSection>
+        <AnimatedSection>
+          <div className="bg-white p-4 rounded-lg shadow mb-8">
+            <ResponsiveContainer width="100%" height={500}>
+              <LineChart
+                data={constructorChartData}
+                margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+              >
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="event" />
+                <YAxis />
+                <Tooltip content={<CustomTooltip />} />
+                <Legend />
+                {constructorStandings.map((team) => (
+                  <Line
+                    key={team.name}
+                    type="monotone"
+                    dataKey={team.name}
+                    stroke={teamColors[team.name] || "#8884d8"}
+                    strokeWidth={2}
+                    activeDot={{ r: 6 }}
+                    connectNulls={true}
+                  />
+                ))}
+              </LineChart>
+            </ResponsiveContainer>
+          </div>
+        </AnimatedSection>
 
-        <h2 className="text-2xl font-medium italic pl-4 my-2">
-          Constructor Standings
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+        <AnimatedSection>
+          <h2 className="text-2xl font-medium italic pl-4 my-2">
+            Constructor Standings
+          </h2>
+        </AnimatedSection>
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 p-4">
           {constructorStandings.map((team) => (
             <div
               key={team.name}
-              className="p-4 rounded-lg shadow-md bg-white cursor-pointer hover:scale-[1.02] transition-transform"
-              onClick={() =>
-                dispatch({ type: ACTIONS.SELECT_CONSTRUCTOR, payload: team })
-              }
+              className="break-inside-avoid p-4 rounded-lg shadow-md bg-white cursor-pointer hover:scale-[1.02] transition-transform mb-4"
+              onClick={() => handleConstructorClick(team)}
               style={{
                 backgroundColor: `${teamColors[team.name]}30`,
                 borderLeft: `6px solid ${teamColors[team.name]}`,
@@ -254,20 +310,20 @@ export default function CurrentSession() {
                 </span>
               </div>
 
-              <div className="mt-2">
-                <p className="text-sm font-bold mt-2">Recent Results:</p>
-                <ul className="text-xs space-y-1 mt-1">
-                  {team.races.slice(-3).map((race, idx) => (
-                    <li
-                      key={`race-${idx}`}
-                      className="flex justify-between items-center py-1"
-                    >
-                      <span className="truncate mr-2">{race.event}</span>
-                      <span className="font-semibold">+{race.points} pts</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              {expandedConstructor?.name === team.name && (
+                <div className="mt-3 border-t pt-3 border-gray-300">
+                  <p className="text-sm font-bold">Last 3 Race Results:</p>
+                  <ul className="text-xs space-y-1 mt-1">
+                    {team.races.slice(-3).map((race, idx) => (
+                      <li key={idx} className="flex justify-between items-center py-1">
+                        <span className="truncate mr-2">{race.event}</span>
+                        <span className="font-semibold">+{race.points} pts</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="text-xs text-gray-400 mt-2">Click again for all results</p>
+                </div>
+              )}
             </div>
           ))}
         </div>
@@ -276,17 +332,20 @@ export default function CurrentSession() {
         {selectConstructor && (
           <div
             className="fixed inset-0 bg-gray-500/50 backdrop-blur-sm z-50 flex justify-center items-center p-2"
-            onClick={() => dispatch({ type: ACTIONS.CLEAR_CONSTRUCTOR })}
+            onClick={() => {
+              dispatch({ type: ACTIONS.CLEAR_CONSTRUCTOR });
+              setExpandedConstructor(null);
+            }}
           >
             <div
-              className="w-full max-w-md max-h-[90vh] overflow-y-hidden bg-white rounded-lg shadow-xl py-2 px-6"
+              className="w-full max-w-md max-h-[90vh] overflow-y-auto bg-white rounded-lg shadow-xl py-2 px-6"
               onClick={(e) => e.stopPropagation()}
               style={{
                 backgroundColor: `${teamColors[selectConstructor.name]}30`,
                 borderLeft: `6px solid ${teamColors[selectConstructor.name]}`,
               }}
             >
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between items-center sticky top-0 bg-inherit py-2">
                 <div>
                   <h3 className="font-bold text-lg ">
                     #{selectConstructor.position} / {selectConstructor.name}
@@ -302,10 +361,10 @@ export default function CurrentSession() {
               <hr className="my-3" />
               <div>
                 <p className="text-sm md:text-base font-bold mt-1">
-                  Race Results:
+                  All Race Results:
                 </p>
                 <ul className="mt-1 space-y-1">
-                  {selectConstructor.races.slice(1).map((race, idx) => (
+                  {selectConstructor.races.map((race, idx) => (
                     <li
                       key={`race-${idx}`}
                       className="flex justify-between items-center text-xs md:text-sm"
