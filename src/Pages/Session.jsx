@@ -1,4 +1,5 @@
 import { useReducer, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import {
   sessionReducer,
   initialState,
@@ -7,9 +8,22 @@ import {
   getAvailableSessions,
 } from "../reducers/sessionReducer";
 import AnimatedSection from "../Components/AnimatedSection";
+import { motion, AnimatePresence } from "motion/react";
+
+const containerVariants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.05 } },
+};
+
+const resultCardVariants = {
+  hidden: { opacity: 0, y: 20, scale: 0.95 },
+  visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.4, ease: "easeOut" } },
+  hover: { y: -4, boxShadow: "0 12px 24px rgba(0,0,0,0.12)", transition: { type: "spring", stiffness: 300 } },
+};
 
 export default function Session() {
   const [state, dispatch] = useReducer(sessionReducer, initialState);
+  const [searchParams, setSearchParams] = useSearchParams();
 
   const {
     selectedYear,
@@ -23,10 +37,17 @@ export default function Session() {
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-    loadYearData(selectedYear);
-  }, [selectedYear]);
+    const roundParam = searchParams.get("round");
+    const yearParam = searchParams.get("year");
+    const year = yearParam ? Number(yearParam) : selectedYear;
+    if (year !== selectedYear) {
+      dispatch({ type: ACTIONS.SET_YEAR, payload: year });
+    }
+    loadYearData(year, roundParam ? Number(roundParam) : null);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-  const loadYearData = async (year) => {
+  const loadYearData = async (year, preSelectedRound = null) => {
     dispatch({ type: ACTIONS.SET_LOADING, payload: true });
     try {
       const sessionData = await import(`../assets/session${year}.json`);
@@ -37,6 +58,14 @@ export default function Session() {
           teamColors: sessionData.teamColors || {},
         },
       });
+      if (preSelectedRound) {
+        const allRaces = getUniqueRaces(sessionData.races || []);
+        const race = allRaces.find(r => r.round_number === preSelectedRound);
+        if (race) {
+          dispatch({ type: ACTIONS.SELECT_RACE, payload: race });
+          dispatch({ type: ACTIONS.SELECT_SESSION, payload: "Race" });
+        }
+      }
     } catch (error) {
       console.error(`Error loading data for year ${year}:`, error);
       dispatch({ type: ACTIONS.SET_YEAR_ERROR });
@@ -46,12 +75,20 @@ export default function Session() {
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-screen">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500 mx-auto"></div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          className="text-center"
+        >
+          <motion.div
+            animate={{ rotate: 360 }}
+            transition={{ repeat: Infinity, duration: 1, ease: "linear" }}
+            className="rounded-full h-12 w-12 border-t-2 border-b-2 border-red-600 mx-auto"
+          />
           <p className="mt-4 text-lg font-medium">
             Loading {selectedYear} data...
           </p>
-        </div>
+        </motion.div>
       </div>
     );
   }
@@ -68,15 +105,16 @@ export default function Session() {
           <h2 className="text-4xl font-bold italic text-center">
             {selectedYear} Season
           </h2>
-          <select
+          <motion.select
             value={selectedYear}
-            onChange={(e) =>
-              dispatch({
-                type: ACTIONS.SET_YEAR,
-                payload: Number(e.target.value),
-              })
-            }
-            className="px-4 py-2 rounded-lg border border-gray-300"
+            onChange={(e) => {
+              const year = Number(e.target.value);
+              setSearchParams({ year: String(year) });
+              dispatch({ type: ACTIONS.SET_YEAR, payload: year });
+              loadYearData(year);
+            }}
+            whileFocus={{ scale: 1.02 }}
+            className="px-4 py-2 rounded-lg border border-gray-300 cursor-pointer"
           >
             {[2026, 2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018].map(
               (year) => (
@@ -85,7 +123,7 @@ export default function Session() {
                 </option>
               )
             )}
-          </select>
+          </motion.select>
         </div>
       </AnimatedSection>
 
@@ -93,57 +131,85 @@ export default function Session() {
         <>
           <AnimatedSection>
             <div className="mb-8 overflow-x-auto">
-              <div className="flex space-x-2 pb-2">
+              <motion.div
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                className="flex space-x-2 pb-2"
+              >
                 {uniqueRaces.map((race) => (
-                  <button
+                  <motion.button
                     key={race.round_number}
-                    onClick={() =>
-                      dispatch({ type: ACTIONS.SELECT_RACE, payload: race })
-                    }
-                    className={`px-4 py-2 rounded-lg whitespace-nowrap cursor-pointer ${
+                    variants={resultCardVariants}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    onClick={() => {
+                      dispatch({ type: ACTIONS.SELECT_RACE, payload: race });
+                      setSearchParams({ year: String(selectedYear), round: String(race.round_number) });
+                    }}
+                    className={`px-4 py-2 rounded-lg whitespace-nowrap cursor-pointer transition-colors duration-300 ${
                       selectedRace?.round_number === race.round_number
                         ? "bg-red-600 text-white"
                         : "bg-gray-200 hover:bg-gray-300"
                     }`}
                   >
                     {race.country} GP
-                  </button>
+                  </motion.button>
                 ))}
-              </div>
+              </motion.div>
             </div>
           </AnimatedSection>
 
-          {availableSessions.length > 0 && (
-            <AnimatedSection key={selectedRace?.round_number}>
-              <div className="mb-6">
-                <h3 className="text-xl font-bold mb-3">Session Type</h3>
-                <div className="flex space-x-2">
-                  {availableSessions.map((session) => (
-                    <button
-                      key={session}
-                      onClick={() =>
-                        dispatch({
-                          type: ACTIONS.SELECT_SESSION,
-                          payload: session,
-                        })
-                      }
-                      className={`px-4 py-2 rounded-lg cursor-pointer ${
-                        selectedSession === session
-                          ? "bg-red-600 text-white"
-                          : "bg-gray-200 hover:bg-gray-300"
-                      }`}
-                    >
-                      {session}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </AnimatedSection>
-          )}
+          <AnimatePresence mode="wait">
+            {availableSessions.length > 0 && (
+              <motion.div
+                key={selectedRace?.round_number}
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.3 }}
+              >
+                <AnimatedSection>
+                  <div className="mb-6">
+                    <h3 className="text-xl font-bold mb-3">Session Type</h3>
+                    <div className="flex space-x-2">
+                      {availableSessions.map((session) => (
+                        <motion.button
+                          key={session}
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                          onClick={() =>
+                            dispatch({
+                              type: ACTIONS.SELECT_SESSION,
+                              payload: session,
+                            })
+                          }
+                          className={`px-4 py-2 rounded-lg cursor-pointer transition-colors duration-300 ${
+                            selectedSession === session
+                              ? "bg-red-600 text-white"
+                              : "bg-gray-200 hover:bg-gray-300"
+                          }`}
+                        >
+                          {session}
+                        </motion.button>
+                      ))}
+                    </div>
+                  </div>
+                </AnimatedSection>
+              </motion.div>
+            )}
+          </AnimatePresence>
 
           {selectedRace && (
             <AnimatedSection>
-              <div className="mb-8 bg-white p-4 rounded-lg shadow-md">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="mb-8 bg-white p-4 rounded-lg shadow-md"
+              >
                 <h3 className="text-2xl font-bold mb-2">
                   {selectedRace.race_name}
                 </h3>
@@ -176,78 +242,99 @@ export default function Session() {
                     <p className="font-medium">{selectedRace.date}</p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </AnimatedSection>
           )}
 
-          {sessionResults.length > 0 && (
-            <AnimatedSection>
-              <>
-                <h3 className="text-2xl font-bold mb-4">
-                  {selectedSession} Results
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-                  {sessionResults.map((result) => (
-                    <div
-                      key={`${result.DriverNumber}-${result.Position}`}
-                      className="bg-white p-4 rounded-lg shadow-md"
-                      style={{
-                        backgroundColor: `${teamColors[result.TeamName]}30`,
-                        borderLeft: `6px solid ${teamColors[result.TeamName]}`,
-                      }}
+          <AnimatePresence mode="wait">
+            {sessionResults.length > 0 && (
+              <motion.div
+                key={`${selectedRace?.round_number}-${selectedSession}`}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <AnimatedSection>
+                  <>
+                    <h3 className="text-2xl font-bold mb-4">
+                      {selectedSession} Results
+                    </h3>
+                    <motion.div
+                      variants={containerVariants}
+                      initial="hidden"
+                      animate="visible"
+                      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
                     >
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="font-bold text-lg">
-                          {typeof result.Position === "number"
-                            ? `P${result.Position}`
-                            : result.Position}
-                        </span>
-                        {result.Points > 0 && (
-                          <span className="bg-green-500 text-white px-2 py-1 rounded-xl text-sm">
-                            +{result.Points} pts
-                          </span>
-                        )}
-                      </div>
-                      <h3 className="font-bold text-xl">{result.FullName}</h3>
-                      <p
-                        className="text-gray-600"
-                        style={{ color: teamColors[result.TeamName] }}
-                      >
-                        {result.TeamName}
-                      </p>
-                      <div className="mt-2 text-sm">
-                        <p>Driver Number: {result.DriverNumber}</p>
-                        <p>Driver Code: {result.Abbreviation}</p>
-                        {result.Status &&
-                          result.Status !== "Finished" &&
-                          result.Status !== "" && (
-                            <p
-                              className={`mt-1 ${
-                                result.Status === "Retired" ||
-                                result.Status === "Disqualified"
-                                  ? "text-red-600"
-                                  : "text-yellow-600"
-                              }`}
-                            >
-                              Status: {result.Status}
-                            </p>
-                          )}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </>
-            </AnimatedSection>
-          )}
+                      {sessionResults.map((result) => (
+                        <motion.div
+                          key={`${result.DriverNumber}-${result.Position}`}
+                          variants={resultCardVariants}
+                          whileHover="hover"
+                          className="bg-white p-4 rounded-lg shadow-md"
+                          style={{
+                            backgroundColor: `${teamColors[result.TeamName]}20`,
+                            borderLeft: `6px solid ${teamColors[result.TeamName]}`,
+                          }}
+                        >
+                          <div className="flex items-center justify-between mb-2">
+                            <span className="font-bold text-lg">
+                              {typeof result.Position === "number"
+                                ? `P${result.Position}`
+                                : result.Position}
+                            </span>
+                            {result.Points > 0 && (
+                              <span className="bg-green-500 text-white px-2 py-1 rounded-xl text-sm">
+                                +{result.Points} pts
+                              </span>
+                            )}
+                          </div>
+                          <h3 className="font-bold text-xl">{result.FullName}</h3>
+                          <p
+                            className="text-gray-600"
+                            style={{ color: teamColors[result.TeamName] }}
+                          >
+                            {result.TeamName}
+                          </p>
+                          <div className="mt-2 text-sm">
+                            <p>Driver Number: {result.DriverNumber}</p>
+                            <p>Driver Code: {result.Abbreviation}</p>
+                            {result.Status &&
+                              result.Status !== "Finished" &&
+                              result.Status !== "" && (
+                                <p
+                                  className={`mt-1 ${
+                                    result.Status === "Retired" ||
+                                    result.Status === "Disqualified"
+                                      ? "text-red-600"
+                                      : "text-yellow-600"
+                                  }`}
+                                >
+                                  Status: {result.Status}
+                                </p>
+                              )}
+                          </div>
+                        </motion.div>
+                      ))}
+                    </motion.div>
+                  </>
+                </AnimatedSection>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </>
       ) : (
         <AnimatedSection>
-          <div className="text-center py-8">
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-center py-8"
+          >
             <h3 className="text-xl font-bold text-gray-600">
               No data available for {selectedYear}
             </h3>
             <p className="text-gray-500 mt-2">Please select a different year.</p>
-          </div>
+          </motion.div>
         </AnimatedSection>
       )}
     </div>

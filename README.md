@@ -1,28 +1,39 @@
-### formula1Points
 # 🏎️ Formula 1 Points Tracker
 
-A web application built with **React + Vite** that tracks Formula 1 standings, historical race results, and the current season schedule — all in one place.
+A web application built with **React + Vite** that tracks Formula 1 standings, historical race results, and the current season schedule — all in one place, with smooth animations and a modern UI.
 
 🔗 **Live Site:** [formula1points.netlify.app](https://formula1points.netlify.app)
 
 ---
 
-## 📸 Features
+## ✨ Features
 
-### 🏆 Championship Standings
-- Interactive charts displaying the **Drivers' Championship** and **Constructors' Championship** points for the current season
-- Each team is color-coded with their official livery color
-- Updated after every race weekend
+### 🏆 Championship Standings (Current Season)
+- Interactive **Drivers' Championship** and **Constructors' Championship** points charts via Recharts
+- Color-coded cards matching each team's official livery
+- Click any driver or constructor card to expand last 3 race results, click again for the full modal with complete race-by-race breakdown
+- Close modals via **X button**, overlay click, or **browser back button**
 
-### 📋 Race Results (2018 – Present)
-- Full archive of **race and qualifying results** from the 2018 season up to today
-- Browse by season and round
-- Includes driver positions, fastest laps, and grid positions
+### 📋 Race & Qualifying Results Archive (2018 – Present)
+- Browse results by **season** (2018 through current) and **round**
+- Filter by **session type**: Race, Qualifying, Sprint, etc.
+- Each result card shows position, points, driver number, and status (DNF, DSQ, etc.)
+- Team-colored left borders for quick visual identification
+- Navigate directly from a schedule race to its results via URL params (`/sessions?round=4&year=2026`)
 
 ### 📅 Season Schedule
 - Full calendar of the **current F1 season**
-- **Completed races** display the **top 3 finishers** (P1, P2, P3) with their results
-- **Upcoming races** show the **date, circuit name, and circuit image** so you know what's coming next
+- **Ended races** display the **top 3 finishers** (P1, P2, P3) with podium styling (gold/silver/bronze)
+- Click any ended race to jump directly to its **Race session results**
+- **Next race** featured in a prominent dark countdown block with **days & hours remaining**
+- Remaining upcoming races shown in a grid
+
+### 🎬 Animations
+- Scroll-triggered fade-in-up sections using **Motion** (formerly Framer Motion)
+- Staggered card entrance animations in grids
+- Spring-physics hover/tap effects on all interactive elements
+- Smooth page transitions via `AnimatePresence`
+- Animated modals with scale + fade transitions
 
 ---
 
@@ -30,12 +41,14 @@ A web application built with **React + Vite** that tracks Formula 1 standings, h
 
 | Technology | Purpose |
 |---|---|
-| React | UI framework |
-| Vite | Build tool & dev server |
-| Tailwind CSS | Styling |
-| Recharts / Chart.js | Championship points charts |
-| Ergast API / OpenF1 API | Formula 1 data |
-| Netlify | Deployment |
+| **React 19** | UI framework |
+| **Vite 6** | Build tool & dev server |
+| **Tailwind CSS 4** | Utility-first styling |
+| **Motion** | Animations & transitions |
+| **React Router v7** | Client-side routing & URL params |
+| **Recharts** | Championship points charts |
+| **Lucide React** | Icon library |
+| **React Toastify** | Toast notifications |
 
 ---
 
@@ -71,23 +84,35 @@ npm run build
 
 The output will be in the `dist/` folder.
 
+### Lint
+
+```bash
+npm run lint
+```
+
 ---
 
 ## 📁 Project Structure
 
 ```
 formula1Points/
-├── public/             # Static assets
+├── public/                  # Static assets (favicon, etc.)
 ├── src/
-│   ├── components/     # Reusable UI components
-│   ├── pages/
-│   │   ├── Standings/  # Championship points charts
-│   │   ├── Results/    # Race & qualifying results archive
-│   │   └── Schedule/   # Season schedule page
-│   ├── App.jsx
-│   └── main.jsx
+│   ├── assets/              # JSON data files (session results, schedule)
+│   ├── Components/
+│   │   ├── AnimatedSection.jsx   # Scroll-triggered animation wrapper
+│   │   └── Navbar.jsx            # Responsive navigation bar
+│   ├── Pages/
+│   │   ├── CurrentSession.jsx    # Home — current season standings
+│   │   ├── Schedule.jsx          # Season schedule with countdown
+│   │   └── Session.jsx           # Race/qualifying results archive
+│   ├── reducers/                 # useReducer state management
+│   ├── App.jsx                   # App shell + animated routes
+│   ├── index.css                 # Tailwind imports + global styles
+│   └── main.jsx                  # Entry point
 ├── index.html
 ├── vite.config.js
+├── eslint.config.js
 └── package.json
 ```
 
@@ -111,4 +136,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-> Data provided by the [Ergast Developer API](http://ergast.com/mrd/) and/or [OpenF1 API](https://openf1.org/). This project is not affiliated with Formula 1 or the FIA.
+> Data sourced from the Formula 1 media API. This project is not affiliated with Formula 1 or the FIA.
