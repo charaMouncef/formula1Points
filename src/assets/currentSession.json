@@ -122,7 +122,7 @@
         },
         {
           "DriverNumber": "14",
-          "FullName": "Fer0do Alonso",
+          "FullName": "Fernando Alonso",
           "Abbreviation": "ALO",
           "TeamName": "Aston Martin",
           "Points": 0.0
@@ -161,192 +161,6 @@
           "Abbreviation": "SAI",
           "TeamName": "Williams",
           "Points": 0.0
-        }
-      ]
-    },
-    {
-      "round_number": 1,
-      "race_name": "Australian Grand Prix",
-      "country": "Australia",
-      "circuit": "Melbourne",
-      "date": "2026-03-08 00:00:00",
-      "session_name": "Qualifying",
-      "results": [
-        {
-          "Position": 1.0,
-          "DriverNumber": "63",
-          "FullName": "George Russell",
-          "Abbreviation": "RUS",
-          "TeamName": "Mercedes",
-          "Status": ""
-        },
-        {
-          "Position": 2.0,
-          "DriverNumber": "12",
-          "FullName": "Kimi Antonelli",
-          "Abbreviation": "ANT",
-          "TeamName": "Mercedes",
-          "Status": ""
-        },
-        {
-          "Position": 3.0,
-          "DriverNumber": "6",
-          "FullName": "Isack Hadjar",
-          "Abbreviation": "HAD",
-          "TeamName": "Red Bull Racing",
-          "Status": ""
-        },
-        {
-          "Position": 4.0,
-          "DriverNumber": "16",
-          "FullName": "Charles Leclerc",
-          "Abbreviation": "LEC",
-          "TeamName": "Ferrari",
-          "Status": ""
-        },
-        {
-          "Position": 5.0,
-          "DriverNumber": "81",
-          "FullName": "Oscar Piastri",
-          "Abbreviation": "PIA",
-          "TeamName": "McLaren",
-          "Status": ""
-        },
-        {
-          "Position": 6.0,
-          "DriverNumber": "1",
-          "FullName": "Lando Norris",
-          "Abbreviation": "NOR",
-          "TeamName": "McLaren",
-          "Status": ""
-        },
-        {
-          "Position": 7.0,
-          "DriverNumber": "44",
-          "FullName": "Lewis Hamilton",
-          "Abbreviation": "HAM",
-          "TeamName": "Ferrari",
-          "Status": ""
-        },
-        {
-          "Position": 8.0,
-          "DriverNumber": "30",
-          "FullName": "Liam Lawson",
-          "Abbreviation": "LAW",
-          "TeamName": "Racing Bulls",
-          "Status": ""
-        },
-        {
-          "Position": 9.0,
-          "DriverNumber": "41",
-          "FullName": "Arvid Lindblad",
-          "Abbreviation": "LIN",
-          "TeamName": "Racing Bulls",
-          "Status": ""
-        },
-        {
-          "Position": 10.0,
-          "DriverNumber": "5",
-          "FullName": "Gabriel Bortoleto",
-          "Abbreviation": "BOR",
-          "TeamName": "Audi",
-          "Status": ""
-        },
-        {
-          "Position": 11.0,
-          "DriverNumber": "27",
-          "FullName": "Nico Hulkenberg",
-          "Abbreviation": "HUL",
-          "TeamName": "Audi",
-          "Status": ""
-        },
-        {
-          "Position": 12.0,
-          "DriverNumber": "87",
-          "FullName": "Oliver Bearman",
-          "Abbreviation": "BEA",
-          "TeamName": "Haas F1 Team",
-          "Status": ""
-        },
-        {
-          "Position": 13.0,
-          "DriverNumber": "31",
-          "FullName": "Esteban Ocon",
-          "Abbreviation": "OCO",
-          "TeamName": "Haas F1 Team",
-          "Status": ""
-        },
-        {
-          "Position": 14.0,
-          "DriverNumber": "10",
-          "FullName": "Pierre Gasly",
-          "Abbreviation": "GAS",
-          "TeamName": "Alpine",
-          "Status": ""
-        },
-        {
-          "Position": 15.0,
-          "DriverNumber": "23",
-          "FullName": "Alexander Albon",
-          "Abbreviation": "ALB",
-          "TeamName": "Williams",
-          "Status": ""
-        },
-        {
-          "Position": 16.0,
-          "DriverNumber": "43",
-          "FullName": "Franco Colapinto",
-          "Abbreviation": "COL",
-          "TeamName": "Alpine",
-          "Status": ""
-        },
-        {
-          "Position": 17.0,
-          "DriverNumber": "14",
-          "FullName": "Fer0do Alonso",
-          "Abbreviation": "ALO",
-          "TeamName": "Aston Martin",
-          "Status": ""
-        },
-        {
-          "Position": 18.0,
-          "DriverNumber": "11",
-          "FullName": "Sergio Perez",
-          "Abbreviation": "PER",
-          "TeamName": "Cadillac",
-          "Status": ""
-        },
-        {
-          "Position": 19.0,
-          "DriverNumber": "77",
-          "FullName": "Valtteri Bottas",
-          "Abbreviation": "BOT",
-          "TeamName": "Cadillac",
-          "Status": ""
-        },
-        {
-          "Position": 20.0,
-          "DriverNumber": "18",
-          "FullName": "Lance Stroll",
-          "Abbreviation": "STR",
-          "TeamName": "Aston Martin",
-          "Status": ""
-        },
-        {
-          "Position": 21.0,
-          "DriverNumber": "3",
-          "FullName": "Max Verstappen",
-          "Abbreviation": "VER",
-          "TeamName": "Red Bull Racing",
-          "Status": ""
-        },
-        {
-          "Position": 22.0,
-          "DriverNumber": "55",
-          "FullName": "Carlos Sainz",
-          "Abbreviation": "SAI",
-          "TeamName": "Williams",
-          "Status": ""
         }
       ]
     },
@@ -555,192 +369,6 @@
           "TeamName": "McLaren",
           "Status": "",
           "Points": 0
-        }
-      ]
-    },
-    {
-      "round_number": 2,
-      "race_name": "Chinese Grand Prix",
-      "country": "China",
-      "circuit": "Shanghai",
-      "date": "2026-03-15 00:00:00",
-      "session_name": "Qualifying",
-      "results": [
-        {
-          "Position": 1.0,
-          "DriverNumber": "12",
-          "FullName": "Kimi Antonelli",
-          "Abbreviation": "ANT",
-          "TeamName": "Mercedes",
-          "Status": ""
-        },
-        {
-          "Position": 2.0,
-          "DriverNumber": "63",
-          "FullName": "George Russell",
-          "Abbreviation": "RUS",
-          "TeamName": "Mercedes",
-          "Status": ""
-        },
-        {
-          "Position": 3.0,
-          "DriverNumber": "44",
-          "FullName": "Lewis Hamilton",
-          "Abbreviation": "HAM",
-          "TeamName": "Ferrari",
-          "Status": ""
-        },
-        {
-          "Position": 4.0,
-          "DriverNumber": "16",
-          "FullName": "Charles Leclerc",
-          "Abbreviation": "LEC",
-          "TeamName": "Ferrari",
-          "Status": ""
-        },
-        {
-          "Position": 5.0,
-          "DriverNumber": "81",
-          "FullName": "Oscar Piastri",
-          "Abbreviation": "PIA",
-          "TeamName": "McLaren",
-          "Status": ""
-        },
-        {
-          "Position": 6.0,
-          "DriverNumber": "1",
-          "FullName": "Lando Norris",
-          "Abbreviation": "NOR",
-          "TeamName": "McLaren",
-          "Status": ""
-        },
-        {
-          "Position": 7.0,
-          "DriverNumber": "10",
-          "FullName": "Pierre Gasly",
-          "Abbreviation": "GAS",
-          "TeamName": "Alpine",
-          "Status": ""
-        },
-        {
-          "Position": 8.0,
-          "DriverNumber": "3",
-          "FullName": "Max Verstappen",
-          "Abbreviation": "VER",
-          "TeamName": "Red Bull Racing",
-          "Status": ""
-        },
-        {
-          "Position": 9.0,
-          "DriverNumber": "6",
-          "FullName": "Isack Hadjar",
-          "Abbreviation": "HAD",
-          "TeamName": "Red Bull Racing",
-          "Status": ""
-        },
-        {
-          "Position": 10.0,
-          "DriverNumber": "87",
-          "FullName": "Oliver Bearman",
-          "Abbreviation": "BEA",
-          "TeamName": "Haas F1 Team",
-          "Status": ""
-        },
-        {
-          "Position": 11.0,
-          "DriverNumber": "27",
-          "FullName": "Nico Hulkenberg",
-          "Abbreviation": "HUL",
-          "TeamName": "Audi",
-          "Status": ""
-        },
-        {
-          "Position": 12.0,
-          "DriverNumber": "43",
-          "FullName": "Franco Colapinto",
-          "Abbreviation": "COL",
-          "TeamName": "Alpine",
-          "Status": ""
-        },
-        {
-          "Position": 13.0,
-          "DriverNumber": "31",
-          "FullName": "Esteban Ocon",
-          "Abbreviation": "OCO",
-          "TeamName": "Haas F1 Team",
-          "Status": ""
-        },
-        {
-          "Position": 14.0,
-          "DriverNumber": "30",
-          "FullName": "Liam Lawson",
-          "Abbreviation": "LAW",
-          "TeamName": "Racing Bulls",
-          "Status": ""
-        },
-        {
-          "Position": 15.0,
-          "DriverNumber": "41",
-          "FullName": "Arvid Lindblad",
-          "Abbreviation": "LIN",
-          "TeamName": "Racing Bulls",
-          "Status": ""
-        },
-        {
-          "Position": 16.0,
-          "DriverNumber": "5",
-          "FullName": "Gabriel Bortoleto",
-          "Abbreviation": "BOR",
-          "TeamName": "Audi",
-          "Status": ""
-        },
-        {
-          "Position": 17.0,
-          "DriverNumber": "55",
-          "FullName": "Carlos Sainz",
-          "Abbreviation": "SAI",
-          "TeamName": "Williams",
-          "Status": ""
-        },
-        {
-          "Position": 18.0,
-          "DriverNumber": "23",
-          "FullName": "Alexander Albon",
-          "Abbreviation": "ALB",
-          "TeamName": "Williams",
-          "Status": ""
-        },
-        {
-          "Position": 19.0,
-          "DriverNumber": "14",
-          "FullName": "Fernando Alonso",
-          "Abbreviation": "ALO",
-          "TeamName": "Aston Martin",
-          "Status": ""
-        },
-        {
-          "Position": 20.0,
-          "DriverNumber": "77",
-          "FullName": "Valtteri Bottas",
-          "Abbreviation": "BOT",
-          "TeamName": "Cadillac",
-          "Status": ""
-        },
-        {
-          "Position": 21.0,
-          "DriverNumber": "18",
-          "FullName": "Lance Stroll",
-          "Abbreviation": "STR",
-          "TeamName": "Aston Martin",
-          "Status": ""
-        },
-        {
-          "Position": 22.0,
-          "DriverNumber": "11",
-          "FullName": "Sergio Perez",
-          "Abbreviation": "PER",
-          "TeamName": "Cadillac",
-          "Status": ""
         }
       ]
     },
@@ -1781,6 +1409,426 @@
           "TeamName": "Red Bull Racing",
           "Status": "Retired",
           "Points": 0.0
+        }
+      ]
+    },
+    {
+      "circuit_image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/f_auto/q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Saudi_Arabia_Circuit.png",
+      "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/saudi-arabia-flag.png",
+      "round_number": 5,
+      "race_name": "Canadian Grand Prix",
+      "country": "Canada",
+      "circuit": "Montr\u00e9al",
+      "date": "2026-05-24 00:00:00",
+      "session_name": "Sprint",
+      "results": [
+        {
+          "Position": 1,
+          "DriverNumber": "63",
+          "FullName": "George Russell",
+          "Abbreviation": "RUS",
+          "TeamName": "Mercedes",
+          "Status": "Finished",
+          "Points": 8
+        },
+        {
+          "Position": 2,
+          "DriverNumber": "1",
+          "FullName": "Lando Norris",
+          "Abbreviation": "NOR",
+          "TeamName": "McLaren",
+          "Status": "Finished",
+          "Points": 7
+        },
+        {
+          "Position": 3,
+          "DriverNumber": "12",
+          "FullName": "Kimi Antonelli",
+          "Abbreviation": "ANT",
+          "TeamName": "Mercedes",
+          "Status": "Finished",
+          "Points": 6
+        },
+        {
+          "Position": 4,
+          "DriverNumber": "81",
+          "FullName": "Oscar Piastri",
+          "Abbreviation": "PIA",
+          "TeamName": "McLaren",
+          "Status": "Finished",
+          "Points": 5
+        },
+        {
+          "Position": 5,
+          "DriverNumber": "16",
+          "FullName": "Charles Leclerc",
+          "Abbreviation": "LEC",
+          "TeamName": "Ferrari",
+          "Status": "Finished",
+          "Points": 4
+        },
+        {
+          "Position": 6,
+          "DriverNumber": "44",
+          "FullName": "Lewis Hamilton",
+          "Abbreviation": "HAM",
+          "TeamName": "Ferrari",
+          "Status": "Finished",
+          "Points": 3
+        },
+        {
+          "Position": 7,
+          "DriverNumber": "3",
+          "FullName": "Max Verstappen",
+          "Abbreviation": "VER",
+          "TeamName": "Red Bull Racing",
+          "Status": "Finished",
+          "Points": 2
+        },
+        {
+          "Position": 8,
+          "DriverNumber": "41",
+          "FullName": "Arvid Lindblad",
+          "Abbreviation": "LIN",
+          "TeamName": "Racing Bulls",
+          "Status": "Finished",
+          "Points": 1
+        },
+        {
+          "Position": 9,
+          "DriverNumber": "43",
+          "FullName": "Franco Colapinto",
+          "Abbreviation": "COL",
+          "TeamName": "Alpine",
+          "Status": "Finished",
+          "Points": 0
+        },
+        {
+          "Position": 10,
+          "DriverNumber": "55",
+          "FullName": "Carlos Sainz",
+          "Abbreviation": "SAI",
+          "TeamName": "Williams",
+          "Status": "Finished",
+          "Points": 0
+        },
+        {
+          "Position": 11,
+          "DriverNumber": "30",
+          "FullName": "Liam Lawson",
+          "Abbreviation": "LAW",
+          "TeamName": "Racing Bulls",
+          "Status": "Finished",
+          "Points": 0
+        },
+        {
+          "Position": 12,
+          "DriverNumber": "5",
+          "FullName": "Gabriel Bortoleto",
+          "Abbreviation": "BOR",
+          "TeamName": "Audi",
+          "Status": "Finished",
+          "Points": 0
+        },
+        {
+          "Position": 13,
+          "DriverNumber": "31",
+          "FullName": "Esteban Ocon",
+          "Abbreviation": "OCO",
+          "TeamName": "Haas F1 Team",
+          "Status": "Finished",
+          "Points": 0
+        },
+        {
+          "Position": 14,
+          "DriverNumber": "11",
+          "FullName": "Sergio Perez",
+          "Abbreviation": "PER",
+          "TeamName": "Cadillac",
+          "Status": "Finished",
+          "Points": 0
+        },
+        {
+          "Position": 15,
+          "DriverNumber": "27",
+          "FullName": "Nico Hulkenberg",
+          "Abbreviation": "HUL",
+          "TeamName": "Audi",
+          "Status": "Finished",
+          "Points": 0
+        },
+        {
+          "Position": 16,
+          "DriverNumber": "18",
+          "FullName": "Lance Stroll",
+          "Abbreviation": "STR",
+          "TeamName": "Aston Martin",
+          "Status": "Lapped",
+          "Points": 0
+        },
+        {
+          "Position": 17,
+          "DriverNumber": "77",
+          "FullName": "Valtteri Bottas",
+          "Abbreviation": "BOT",
+          "TeamName": "Cadillac",
+          "Status": "Lapped",
+          "Points": 0
+        },
+        {
+          "Position": 18,
+          "DriverNumber": "87",
+          "FullName": "Oliver Bearman",
+          "Abbreviation": "BEA",
+          "TeamName": "Haas F1 Team",
+          "Status": "Lapped",
+          "Points": 0
+        },
+        {
+          "Position": 19,
+          "DriverNumber": "23",
+          "FullName": "Alexander Albon",
+          "Abbreviation": "ALB",
+          "TeamName": "Williams",
+          "Status": "Lapped",
+          "Points": 0
+        },
+        {
+          "Position": 20,
+          "DriverNumber": "10",
+          "FullName": "Pierre Gasly",
+          "Abbreviation": "GAS",
+          "TeamName": "Alpine",
+          "Status": "Lapped",
+          "Points": 0
+        },
+        {
+          "Position": 21,
+          "DriverNumber": "6",
+          "FullName": "Isack Hadjar",
+          "Abbreviation": "HAD",
+          "TeamName": "Red Bull Racing",
+          "Status": "Lapped",
+          "Points": 0
+        },
+        {
+          "Position": 22,
+          "DriverNumber": "14",
+          "FullName": "Fernando Alonso",
+          "Abbreviation": "ALO",
+          "TeamName": "Aston Martin",
+          "Status": "Retired",
+          "Points": 0
+        }
+      ]
+    },
+    {
+      "circuit_image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/f_auto/q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Saudi_Arabia_Circuit.png",
+      "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/saudi-arabia-flag.png",
+      "round_number": 5,
+      "race_name": "Canadian Grand Prix",
+      "country": "Canada",
+      "circuit": "Montr\u00e9al",
+      "date": "2026-05-24 00:00:00",
+      "session_name": "Race",
+      "results": [
+        {
+          "Position": 1,
+          "DriverNumber": "12",
+          "FullName": "Kimi Antonelli",
+          "Abbreviation": "ANT",
+          "TeamName": "Mercedes",
+          "Status": "Finished",
+          "Points": 25
+        },
+        {
+          "Position": 2,
+          "DriverNumber": "44",
+          "FullName": "Lewis Hamilton",
+          "Abbreviation": "HAM",
+          "TeamName": "Ferrari",
+          "Status": "Finished",
+          "Points": 18
+        },
+        {
+          "Position": 3,
+          "DriverNumber": "3",
+          "FullName": "Max Verstappen",
+          "Abbreviation": "VER",
+          "TeamName": "Red Bull Racing",
+          "Status": "Finished",
+          "Points": 15
+        },
+        {
+          "Position": 4,
+          "DriverNumber": "16",
+          "FullName": "Charles Leclerc",
+          "Abbreviation": "LEC",
+          "TeamName": "Ferrari",
+          "Status": "Finished",
+          "Points": 12
+        },
+        {
+          "Position": 5,
+          "DriverNumber": "6",
+          "FullName": "Isack Hadjar",
+          "Abbreviation": "HAD",
+          "TeamName": "Red Bull Racing",
+          "Status": "Lapped",
+          "Points": 10
+        },
+        {
+          "Position": 6,
+          "DriverNumber": "43",
+          "FullName": "Franco Colapinto",
+          "Abbreviation": "COL",
+          "TeamName": "Alpine",
+          "Status": "Lapped",
+          "Points": 8
+        },
+        {
+          "Position": 7,
+          "DriverNumber": "30",
+          "FullName": "Liam Lawson",
+          "Abbreviation": "LAW",
+          "TeamName": "Racing Bulls",
+          "Status": "Lapped",
+          "Points": 6
+        },
+        {
+          "Position": 8,
+          "DriverNumber": "10",
+          "FullName": "Pierre Gasly",
+          "Abbreviation": "GAS",
+          "TeamName": "Alpine",
+          "Status": "Lapped",
+          "Points": 4
+        },
+        {
+          "Position": 9,
+          "DriverNumber": "55",
+          "FullName": "Carlos Sainz",
+          "Abbreviation": "SAI",
+          "TeamName": "Williams",
+          "Status": "Lapped",
+          "Points": 2
+        },
+        {
+          "Position": 10,
+          "DriverNumber": "87",
+          "FullName": "Oliver Bearman",
+          "Abbreviation": "BEA",
+          "TeamName": "Haas F1 Team",
+          "Status": "Lapped",
+          "Points": 1
+        },
+        {
+          "Position": 11,
+          "DriverNumber": "81",
+          "FullName": "Oscar Piastri",
+          "Abbreviation": "PIA",
+          "TeamName": "McLaren",
+          "Status": "Lapped",
+          "Points": 0
+        },
+        {
+          "Position": 12,
+          "DriverNumber": "27",
+          "FullName": "Nico Hulkenberg",
+          "Abbreviation": "HUL",
+          "TeamName": "Audi",
+          "Status": "Lapped",
+          "Points": 0
+        },
+        {
+          "Position": 13,
+          "DriverNumber": "5",
+          "FullName": "Gabriel Bortoleto",
+          "Abbreviation": "BOR",
+          "TeamName": "Audi",
+          "Status": "Lapped",
+          "Points": 0
+        },
+        {
+          "Position": 14,
+          "DriverNumber": "31",
+          "FullName": "Esteban Ocon",
+          "Abbreviation": "OCO",
+          "TeamName": "Haas F1 Team",
+          "Status": "Lapped",
+          "Points": 0
+        },
+        {
+          "Position": 15,
+          "DriverNumber": "18",
+          "FullName": "Lance Stroll",
+          "Abbreviation": "STR",
+          "TeamName": "Aston Martin",
+          "Status": "Lapped",
+          "Points": 0
+        },
+        {
+          "Position": 16,
+          "DriverNumber": "77",
+          "FullName": "Valtteri Bottas",
+          "Abbreviation": "BOT",
+          "TeamName": "Cadillac",
+          "Status": "Lapped",
+          "Points": 0
+        },
+        {
+          "Position": 17,
+          "DriverNumber": "11",
+          "FullName": "Sergio Perez",
+          "Abbreviation": "PER",
+          "TeamName": "Cadillac",
+          "Status": "Retired",
+          "Points": 0
+        },
+        {
+          "Position": 18,
+          "DriverNumber": "1",
+          "FullName": "Lando Norris",
+          "Abbreviation": "NOR",
+          "TeamName": "McLaren",
+          "Status": "Retired",
+          "Points": 0
+        },
+        {
+          "Position": 19,
+          "DriverNumber": "63",
+          "FullName": "George Russell",
+          "Abbreviation": "RUS",
+          "TeamName": "Mercedes",
+          "Status": "Retired",
+          "Points": 0
+        },
+        {
+          "Position": 20,
+          "DriverNumber": "14",
+          "FullName": "Fernando Alonso",
+          "Abbreviation": "ALO",
+          "TeamName": "Aston Martin",
+          "Status": "Retired",
+          "Points": 0
+        },
+        {
+          "Position": 21,
+          "DriverNumber": "23",
+          "FullName": "Alexander Albon",
+          "Abbreviation": "ALB",
+          "TeamName": "Williams",
+          "Status": "Retired",
+          "Points": 0
+        },
+        {
+          "Position": 22,
+          "DriverNumber": "41",
+          "FullName": "Arvid Lindblad",
+          "Abbreviation": "LIN",
+          "TeamName": "Racing Bulls",
+          "Status": "Did not start",
+          "Points": 0
         }
       ]
     }

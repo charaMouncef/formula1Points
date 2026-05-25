@@ -140,13 +140,35 @@
       "round_number": 5,
       "race_name": "Canadian Grand Prix",
       "country": "Canada",
-      "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/canada-flag.png",
+      "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/saudi-arabia-flag.png",
       "circuit": "Montr\u00e9al",
-      "circuit_image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/f_auto/q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Canada_Circuit.png",
+      "circuit_image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/f_auto/q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Saudi_Arabia_Circuit.png",
       "date": "2026-05-24",
       "session_name": "Race",
-      "is_completed": false,
-      "top_three": []
+      "is_completed": true,
+      "top_three": [
+        {
+          "position": 2,
+          "driver_name": "Lewis Hamilton",
+          "team": "Ferrari",
+          "driver_image": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2025/lewham01.png",
+          "abbreviation": "HAM"
+        },
+        {
+          "position": 1,
+          "driver_name": "Kimi Antonelli",
+          "team": "Mercedes",
+          "driver_image": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2025/kimant01.png",
+          "abbreviation": "ANT"
+        },
+        {
+          "position": 3,
+          "driver_name": "Max Verstappen",
+          "team": "Red Bull Racing",
+          "driver_image": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2025/maxver01.png",
+          "abbreviation": "VER"
+        }
+      ]
     },
     {
       "round_number": 6,
