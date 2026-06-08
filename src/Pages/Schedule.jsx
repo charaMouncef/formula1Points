@@ -128,7 +128,7 @@ export default function Schedule() {
                               key={race.date}
                               variants={raceCardVariants}
                               whileHover="hover"
-                              onClick={() => navigate(`/sessions?round=${race.round_number}&year=${year}`)}
+                              onClick={() => navigate(`/sessions?year=${year}&round=${race.round_number}`)}
                               className="cursor-pointer"
                             >
                                 <div className="relative border-2 rounded-lg">
