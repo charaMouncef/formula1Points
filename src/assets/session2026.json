@@ -1,7 +1,7 @@
 {
   "races": [
     {
-      "circuit_image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/f_auto/q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Australia_Circuit.png",
+      "circuit_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmelbournedetailed.webp",
       "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/australia-flag.png",
       "round_number": 1,
       "race_name": "Australian Grand Prix",
@@ -189,7 +189,7 @@
       ]
     },
     {
-      "circuit_image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/f_auto/q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Australia_Circuit.png",
+      "circuit_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmelbournedetailed.webp",
       "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/australia-flag.png",
       "round_number": 1,
       "race_name": "Australian Grand Prix",
@@ -400,7 +400,7 @@
     },
     {
       "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/china-flag.png",
-      "circuit_image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/f_auto/q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/China_Circuit.png",
+      "circuit_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackshanghaidetailed.webp",
       "round_number": 2,
       "race_name": "Chinese Grand Prix",
       "country": "China",
@@ -588,7 +588,7 @@
     },
     {
       "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/china-flag.png",
-      "circuit_image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/f_auto/q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/China_Circuit.png",
+      "circuit_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackshanghaidetailed.webp",
       "round_number": 2,
       "race_name": "Chinese Grand Prix",
       "country": "China",
@@ -798,7 +798,7 @@
     },
     {
       "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/china-flag.png",
-      "circuit_image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/f_auto/q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/China_Circuit.png",
+      "circuit_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackshanghaidetailed.webp",
       "round_number": 2,
       "race_name": "Chinese Grand Prix",
       "country": "China",
@@ -1007,7 +1007,7 @@
       ]
     },
     {
-      "circuit_image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/f_auto/q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Japan_Circuit.png",
+      "circuit_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026tracksuzukadetailed.webp",
       "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/japan-flag.png",
       "round_number": 3,
       "race_name": "Japanese Grand Prix",
@@ -1173,7 +1173,7 @@
       ]
     },
     {
-      "circuit_image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/f_auto/q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Japan_Circuit.png",
+      "circuit_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026tracksuzukadetailed.webp",
       "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/japan-flag.png",
       "round_number": 3,
       "race_name": "Japanese Grand Prix",
@@ -1384,7 +1384,7 @@
     },
     {
       "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/united-states-flag.png",
-      "circuit_image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/f_auto/q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Miami_Circuit.png",
+      "circuit_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmiamidetailed.webp",
       "round_number": 4,
       "race_name": "Miami Grand Prix",
       "country": "United States",
@@ -1550,7 +1550,7 @@
     },
     {
       "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/united-states-flag.png",
-      "circuit_image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/f_auto/q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Miami_Circuit.png",
+      "circuit_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmiamidetailed.webp",
       "round_number": 4,
       "race_name": "Miami Grand Prix",
       "country": "United States",
@@ -1760,7 +1760,7 @@
     },
     {
       "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/united-states-flag.png",
-      "circuit_image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/f_auto/q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Miami_Circuit.png",
+      "circuit_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmiamidetailed.webp",
       "round_number": 4,
       "race_name": "Miami Grand Prix",
       "country": "United States",
@@ -1969,12 +1969,12 @@
       ]
     },
     {
-      "circuit_image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/f_auto/q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Canada_Circuit.png",
+      "circuit_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmontrealdetailed.webp",
       "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/canada-flag.png",
       "round_number": 5,
       "race_name": "Canadian Grand Prix",
       "country": "Canada",
-      "circuit": "Montr\u00e9al",
+      "circuit": "Montréal",
       "date": "2026-05-24 00:00:00",
       "session_name": "Qualifying",
       "results": [
@@ -2135,12 +2135,12 @@
       ]
     },
     {
-      "circuit_image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/f_auto/q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Canada_Circuit.png",
+      "circuit_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmontrealdetailed.webp",
       "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/canada-flag.png",
       "round_number": 5,
       "race_name": "Canadian Grand Prix",
       "country": "Canada",
-      "circuit": "Montr\u00e9al",
+      "circuit": "Montréal",
       "date": "2026-05-24 00:00:00",
       "session_name": "Sprint",
       "results": [
@@ -2345,12 +2345,12 @@
       ]
     },
     {
-      "circuit_image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/f_auto/q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Canada_Circuit.png",
+      "circuit_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmontrealdetailed.webp",
       "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/canada-flag.png",
       "round_number": 5,
       "race_name": "Canadian Grand Prix",
       "country": "Canada",
-      "circuit": "Montr\u00e9al",
+      "circuit": "Montréal",
       "date": "2026-05-24 00:00:00",
       "session_name": "Race",
       "results": [
@@ -2555,7 +2555,7 @@
       ]
     },
     {
-      "circuit_image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/f_auto/q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Monaco_Circuit.png",
+      "circuit_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmontecarlodetailed.webp",
       "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/monaco-flag.png",
       "round_number": 6,
       "race_name": "Monaco Grand Prix",
@@ -2721,7 +2721,7 @@
       ]
     },
     {
-      "circuit_image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/f_auto/q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Monaco_Circuit.png",
+      "circuit_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmontecarlodetailed.webp",
       "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/monaco-flag.png",
       "round_number": 6,
       "race_name": "Monaco Grand Prix",

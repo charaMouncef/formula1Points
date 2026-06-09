@@ -6,7 +6,7 @@
       "country": "Australia",
       "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/australia-flag.png",
       "circuit": "Melbourne",
-      "circuit_image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/f_auto/q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Australia_Circuit.png",
+      "circuit_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmelbournedetailed.webp",
       "date": "2026-03-08",
       "session_name": "Race",
       "is_completed": true,
@@ -15,21 +15,21 @@
           "position": 2,
           "driver_name": "Kimi Antonelli",
           "team": "Mercedes",
-          "driver_image": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2025/kimant01.png",
+          "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/mercedes/andant01/2026mercedesandant01right.webp",
           "abbreviation": "ANT"
         },
         {
           "position": 1,
           "driver_name": "George Russell",
           "team": "Mercedes",
-          "driver_image": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2025/georus01.png",
+          "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/mercedes/georus01/2026mercedesgeorus01right.webp",
           "abbreviation": "RUS"
         },
         {
           "position": 3,
           "driver_name": "Charles Leclerc",
           "team": "Ferrari",
-          "driver_image": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2025/chalec01.png",
+          "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/ferrari/chalec01/2026ferrarichalec01right.webp",
           "abbreviation": "LEC"
         }
       ]
@@ -40,7 +40,7 @@
       "country": "China",
       "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/china-flag.png",
       "circuit": "Shanghai",
-      "circuit_image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/f_auto/q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/China_Circuit.png",
+      "circuit_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackshanghaidetailed.webp",
       "date": "2026-03-15",
       "session_name": "Race",
       "is_completed": true,
@@ -49,21 +49,21 @@
           "position": 2,
           "driver_name": "George Russell",
           "team": "Mercedes",
-          "driver_image": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2025/georus01.png",
+          "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/mercedes/georus01/2026mercedesgeorus01right.webp",
           "abbreviation": "RUS"
         },
         {
           "position": 1,
           "driver_name": "Kimi Antonelli",
           "team": "Mercedes",
-          "driver_image": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2025/kimant01.png",
+          "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/mercedes/andant01/2026mercedesandant01right.webp",
           "abbreviation": "ANT"
         },
         {
           "position": 3,
           "driver_name": "Lewis Hamilton",
           "team": "Ferrari",
-          "driver_image": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2025/lewham01.png",
+          "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/ferrari/lewham01/2026ferrarilewham01right.webp",
           "abbreviation": "HAM"
         }
       ]
@@ -74,7 +74,7 @@
       "country": "Japan",
       "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/japan-flag.png",
       "circuit": "Suzuka",
-      "circuit_image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/f_auto/q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Japan_Circuit.png",
+      "circuit_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026tracksuzukadetailed.webp",
       "date": "2026-03-29",
       "session_name": "Race",
       "is_completed": true,
@@ -83,21 +83,21 @@
           "position": 2,
           "driver_name": "Oscar Piastri",
           "team": "McLaren",
-          "driver_image": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2025/oscpia01.png",
+          "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/mclaren/oscpia01/2026mclarenoscpia01right.webp",
           "abbreviation": "PIA"
         },
         {
           "position": 1,
           "driver_name": "Kimi Antonelli",
           "team": "Mercedes",
-          "driver_image": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2025/kimant01.png",
+          "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/mercedes/andant01/2026mercedesandant01right.webp",
           "abbreviation": "ANT"
         },
         {
           "position": 3,
           "driver_name": "Charles Leclerc",
           "team": "Ferrari",
-          "driver_image": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2025/chalec01.png",
+          "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/ferrari/chalec01/2026ferrarichalec01right.webp",
           "abbreviation": "LEC"
         }
       ]
@@ -108,7 +108,7 @@
       "country": "United States",
       "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/united-states-flag.png",
       "circuit": "Miami Gardens",
-      "circuit_image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/f_auto/q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Miami_Circuit.png",
+      "circuit_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmiamidetailed.webp",
       "date": "2026-05-03",
       "session_name": "Race",
       "is_completed": true,
@@ -117,21 +117,21 @@
           "position": 2,
           "driver_name": "Lando Norris",
           "team": "McLaren",
-          "driver_image": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2025/lannor01.png",
+          "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/mclaren/lannor01/2026mclarenlannor01right.webp",
           "abbreviation": "NOR"
         },
         {
           "position": 1,
           "driver_name": "Kimi Antonelli",
           "team": "Mercedes",
-          "driver_image": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2025/kimant01.png",
+          "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/mercedes/andant01/2026mercedesandant01right.webp",
           "abbreviation": "ANT"
         },
         {
           "position": 3,
           "driver_name": "Oscar Piastri",
           "team": "McLaren",
-          "driver_image": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2025/oscpia01.png",
+          "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/mclaren/oscpia01/2026mclarenoscpia01right.webp",
           "abbreviation": "PIA"
         }
       ]
@@ -141,8 +141,8 @@
       "race_name": "Canadian Grand Prix",
       "country": "Canada",
       "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/canada-flag.png",
-      "circuit": "Montr\u00e9al",
-      "circuit_image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/f_auto/q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Canada_Circuit.png",
+      "circuit": "Montréal",
+      "circuit_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmontrealdetailed.webp",
       "date": "2026-05-24",
       "session_name": "Race",
       "is_completed": true,
@@ -151,21 +151,21 @@
           "position": 2,
           "driver_name": "Lewis Hamilton",
           "team": "Ferrari",
-          "driver_image": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2025/lewham01.png",
+          "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/ferrari/lewham01/2026ferrarilewham01right.webp",
           "abbreviation": "HAM"
         },
         {
           "position": 1,
           "driver_name": "Kimi Antonelli",
           "team": "Mercedes",
-          "driver_image": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2025/kimant01.png",
+          "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/mercedes/andant01/2026mercedesandant01right.webp",
           "abbreviation": "ANT"
         },
         {
           "position": 3,
           "driver_name": "Max Verstappen",
           "team": "Red Bull Racing",
-          "driver_image": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2025/maxver01.png",
+          "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/redbullracing/maxver01/2026redbullracingmaxver01right.webp",
           "abbreviation": "VER"
         }
       ]
@@ -176,7 +176,7 @@
       "country": "Monaco",
       "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/monaco-flag.png",
       "circuit": "Monte Carlo",
-      "circuit_image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/f_auto/q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Monaco_Circuit.png",
+      "circuit_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmontecarlodetailed.webp",
       "date": "2026-06-07",
       "session_name": "Race",
       "is_completed": true,
@@ -185,21 +185,21 @@
           "position": 2,
           "driver_name": "Lewis Hamilton",
           "team": "Ferrari",
-          "driver_image": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2025/lewham01.png",
+          "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/ferrari/lewham01/2026ferrarilewham01right.webp",
           "abbreviation": "HAM"
         },
         {
           "position": 1,
           "driver_name": "Kimi Antonelli",
           "team": "Mercedes",
-          "driver_image": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2025/kimant01.png",
+          "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/mercedes/andant01/2026mercedesandant01right.webp",
           "abbreviation": "ANT"
         },
         {
           "position": 3,
           "driver_name": "Isack Hadjar",
           "team": "Red Bull Racing",
-          "driver_image": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2025/isahad01.png",
+          "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/redbullracing/isahad01/2026redbullracingisahad01right.webp",
           "abbreviation": "HAD"
         }
       ]
@@ -210,7 +210,7 @@
       "country": "Spain",
       "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/spain-flag.png",
       "circuit": "Barcelona",
-      "circuit_image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/f_auto/q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Spain_Circuit.png",
+      "circuit_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackcatalunyadetailed.webp",
       "date": "2026-06-14",
       "session_name": "Race",
       "is_completed": false,
@@ -222,7 +222,7 @@
       "country": "Austria",
       "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/austria-flag.png",
       "circuit": "Spielberg",
-      "circuit_image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/f_auto/q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Austria_Circuit.png",
+      "circuit_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackspielbergdetailed.webp",
       "date": "2026-06-28",
       "session_name": "Race",
       "is_completed": false,
@@ -234,7 +234,7 @@
       "country": "United Kingdom",
       "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/united-kingdom-flag.png",
       "circuit": "Silverstone",
-      "circuit_image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/f_auto/q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Great_Britain_Circuit.png",
+      "circuit_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026tracksilverstonedetailed.webp",
       "date": "2026-07-05",
       "session_name": "Race",
       "is_completed": false,
@@ -246,7 +246,7 @@
       "country": "Belgium",
       "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/belgium-flag.png",
       "circuit": "Spa-Francorchamps",
-      "circuit_image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/f_auto/q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Belgium_Circuit.png",
+      "circuit_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackspafrancorchampsdetailed.webp",
       "date": "2026-07-19",
       "session_name": "Race",
       "is_completed": false,
@@ -258,7 +258,7 @@
       "country": "Hungary",
       "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/hungary-flag.png",
       "circuit": "Budapest",
-      "circuit_image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/f_auto/q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Hungary_Circuit.png",
+      "circuit_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackhungaroringdetailed.webp",
       "date": "2026-07-26",
       "session_name": "Race",
       "is_completed": false,
@@ -270,7 +270,7 @@
       "country": "Netherlands",
       "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/netherlands-flag.png",
       "circuit": "Zandvoort",
-      "circuit_image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/f_auto/q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Netherlands_Circuit.png",
+      "circuit_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackzandvoortdetailed.webp",
       "date": "2026-08-23",
       "session_name": "Race",
       "is_completed": false,
@@ -282,7 +282,7 @@
       "country": "Italy",
       "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/italy-flag.png",
       "circuit": "Monza",
-      "circuit_image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/f_auto/q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Italy_Circuit.png",
+      "circuit_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmonzadetailed.webp",
       "date": "2026-09-06",
       "session_name": "Race",
       "is_completed": false,
@@ -294,7 +294,7 @@
       "country": "Spain",
       "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/spain-flag.png",
       "circuit": "Madrid",
-      "circuit_image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/f_auto/q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Spain_Circuit.png",
+      "circuit_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmadringdetailed.webp",
       "date": "2026-09-13",
       "session_name": "Race",
       "is_completed": false,
@@ -306,7 +306,7 @@
       "country": "Azerbaijan",
       "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/azerbaijan-flag.png",
       "circuit": "Baku",
-      "circuit_image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/f_auto/q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Baku_Circuit.png",
+      "circuit_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackbakudetailed.webp",
       "date": "2026-09-26",
       "session_name": "Race",
       "is_completed": false,
@@ -318,7 +318,7 @@
       "country": "Singapore",
       "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/singapore-flag.png",
       "circuit": "Marina Bay",
-      "circuit_image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/f_auto/q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Singapore_Circuit.png",
+      "circuit_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026tracksingaporedetailed.webp",
       "date": "2026-10-11",
       "session_name": "Race",
       "is_completed": false,
@@ -330,7 +330,7 @@
       "country": "United States",
       "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/united-states-flag.png",
       "circuit": "Austin",
-      "circuit_image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/f_auto/q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/USA_Circuit.png",
+      "circuit_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackaustindetailed.webp",
       "date": "2026-10-25",
       "session_name": "Race",
       "is_completed": false,
@@ -342,7 +342,7 @@
       "country": "Mexico",
       "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/mexico-flag.png",
       "circuit": "Mexico City",
-      "circuit_image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/f_auto/q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Mexico_Circuit.png",
+      "circuit_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmexicocitydetailed.webp",
       "date": "2026-11-01",
       "session_name": "Race",
       "is_completed": false,
@@ -350,11 +350,11 @@
     },
     {
       "round_number": 19,
-      "race_name": "S\u00e3o Paulo Grand Prix",
+      "race_name": "São Paulo Grand Prix",
       "country": "Brazil",
       "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/brazil-flag.png",
-      "circuit": "S\u00e3o Paulo",
-      "circuit_image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/f_auto/q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Brazil_Circuit.png",
+      "circuit": "São Paulo",
+      "circuit_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackinterlagosdetailed.webp",
       "date": "2026-11-08",
       "session_name": "Race",
       "is_completed": false,
@@ -366,7 +366,7 @@
       "country": "United States",
       "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/united-states-flag.png",
       "circuit": "Las Vegas",
-      "circuit_image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/f_auto/q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Las_Vegas_Circuit.png",
+      "circuit_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026tracklasvegasdetailed.webp",
       "date": "2026-11-21",
       "session_name": "Race",
       "is_completed": false,
@@ -378,7 +378,7 @@
       "country": "Qatar",
       "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/qatar-flag.png",
       "circuit": "Lusail",
-      "circuit_image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/f_auto/q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Qatar_Circuit.png",
+      "circuit_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026tracklusaildetailed.webp",
       "date": "2026-11-29",
       "session_name": "Race",
       "is_completed": false,
@@ -390,7 +390,7 @@
       "country": "United Arab Emirates",
       "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/united-arab-emirates-flag.png",
       "circuit": "Yas Marina",
-      "circuit_image": "https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/f_auto/q_auto/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Abu_Dhabi_Circuit.png",
+      "circuit_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackyasmarinadetailed.webp",
       "date": "2026-12-06",
       "session_name": "Race",
       "is_completed": false,
