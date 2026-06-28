@@ -214,29 +214,29 @@
       "date": "2026-06-14",
       "session_name": "Race",
       "is_completed": true,
-  "top_three": [
-    {
-      "position": 2,
-      "driver_name": "George Russell",
-      "team": "Mercedes",
-      "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/mercedes/georus01/2026mercedesgeorus01right.webp",
-      "abbreviation": "RUS"
-    },
-    {
-      "position": 1,
-      "driver_name": "Lewis Hamilton",
-      "team": "Ferrari",
-      "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/ferrari/lewham01/2026ferrarilewham01right.webp",
-      "abbreviation": "HAM"
-    },
-    {
-      "position": 3,
-      "driver_name": "Lando Norris",
-      "team": "McLaren",
-      "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/mclaren/lannor01/2026mclarenlannor01right.webp",
-      "abbreviation": "NOR"
-    }
-  ]
+      "top_three": [
+        {
+          "position": 2,
+          "driver_name": "George Russell",
+          "team": "Mercedes",
+          "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/mercedes/georus01/2026mercedesgeorus01right.webp",
+          "abbreviation": "RUS"
+        },
+        {
+          "position": 1,
+          "driver_name": "Lewis Hamilton",
+          "team": "Ferrari",
+          "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/ferrari/lewham01/2026ferrarilewham01right.webp",
+          "abbreviation": "HAM"
+        },
+        {
+          "position": 3,
+          "driver_name": "Lando Norris",
+          "team": "McLaren",
+          "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/mclaren/lannor01/2026mclarenlannor01right.webp",
+          "abbreviation": "NOR"
+        }
+      ]
     },
     {
       "round_number": 8,
@@ -247,8 +247,30 @@
       "circuit_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackspielbergdetailed.webp",
       "date": "2026-06-28",
       "session_name": "Race",
-      "is_completed": false,
-      "top_three": []
+      "is_completed": true,
+      "top_three": [
+        {
+          "position": 2,
+          "driver_name": "Max Verstappen",
+          "team": "Red Bull Racing",
+          "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/redbullracing/maxver01/2026redbullracingmaxver01right.webp",
+          "abbreviation": "VER"
+        },
+        {
+          "position": 1,
+          "driver_name": "George Russell",
+          "team": "Mercedes",
+          "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/mercedes/georus01/2026mercedesgeorus01right.webp",
+          "abbreviation": "RUS"
+        },
+        {
+          "position": 3,
+          "driver_name": "Kimi Antonelli",
+          "team": "Mercedes",
+          "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/mercedes/andant01/2026mercedesandant01right.webp",
+          "abbreviation": "ANT"
+        }
+      ]
     },
     {
       "round_number": 9,
