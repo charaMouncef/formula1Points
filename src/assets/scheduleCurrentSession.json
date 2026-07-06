@@ -281,8 +281,30 @@
       "circuit_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026tracksilverstonedetailed.webp",
       "date": "2026-07-05",
       "session_name": "Race",
-      "is_completed": false,
-      "top_three": []
+      "is_completed": true,
+      "top_three": [
+        {
+          "position": 2,
+          "driver_name": "George Russell",
+          "team": "Mercedes",
+          "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/mercedes/georus01/2026mercedesgeorus01right.webp",
+          "abbreviation": "RUS"
+        },
+        {
+          "position": 1,
+          "driver_name": "Charles Leclerc",
+          "team": "Ferrari",
+          "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/ferrari/chalec01/2026ferrarichalec01right.webp",
+          "abbreviation": "LEC"
+        },
+        {
+          "position": 3,
+          "driver_name": "Lewis Hamilton",
+          "team": "Ferrari",
+          "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/ferrari/lewham01/2026ferrarilewham01right.webp",
+          "abbreviation": "HAM"
+        }
+      ]
     },
     {
       "round_number": 10,
