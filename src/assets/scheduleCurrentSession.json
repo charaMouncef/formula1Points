@@ -383,8 +383,30 @@
       "circuit_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackzandvoortdetailed.webp",
       "date": "2026-08-23",
       "session_name": "Race",
-      "is_completed": false,
-      "top_three": []
+      "is_completed": true,
+      "top_three": [
+        {
+          "position": 2,
+          "driver_name": "Kimi Antonelli",
+          "team": "Mercedes",
+          "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/mercedes/andant01/2026mercedesandant01right.webp",
+          "abbreviation": "ANT"
+        },
+        {
+          "position": 1,
+          "driver_name": "Lando Norris",
+          "team": "McLaren",
+          "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/mclaren/lannor01/2026mclarenlannor01right.webp",
+          "abbreviation": "NOR"
+        },
+        {
+          "position": 3,
+          "driver_name": "George Russell",
+          "team": "Mercedes",
+          "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/mercedes/georus01/2026mercedesgeorus01right.webp",
+          "abbreviation": "RUS"
+        }
+      ]
     },
     {
       "round_number": 13,
@@ -424,6 +446,18 @@
     },
     {
       "round_number": 16,
+      "race_name": "Bahrain Grand Prix in Malaysia",
+      "country": "Bahrain",
+      "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/bahrain-flag.png",
+      "circuit": "Sepang",
+      "circuit_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackkualalumpurdetailed.webp",
+      "date": "2026-10-04",
+      "session_name": "Race",
+      "is_completed": false,
+      "top_three": []
+    },
+    {
+      "round_number": 17,
       "race_name": "Singapore Grand Prix",
       "country": "Singapore",
       "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/singapore-flag.png",
@@ -435,7 +469,7 @@
       "top_three": []
     },
     {
-      "round_number": 17,
+      "round_number": 18,
       "race_name": "United States Grand Prix",
       "country": "United States",
       "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/united-states-flag.png",
@@ -447,7 +481,7 @@
       "top_three": []
     },
     {
-      "round_number": 18,
+      "round_number": 19,
       "race_name": "Mexico City Grand Prix",
       "country": "Mexico",
       "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/mexico-flag.png",
@@ -459,7 +493,7 @@
       "top_three": []
     },
     {
-      "round_number": 19,
+      "round_number": 20,
       "race_name": "São Paulo Grand Prix",
       "country": "Brazil",
       "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/brazil-flag.png",
@@ -471,7 +505,7 @@
       "top_three": []
     },
     {
-      "round_number": 20,
+      "round_number": 21,
       "race_name": "Las Vegas Grand Prix",
       "country": "United States",
       "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/united-states-flag.png",
@@ -483,7 +517,7 @@
       "top_three": []
     },
     {
-      "round_number": 21,
+      "round_number": 22,
       "race_name": "Qatar Grand Prix",
       "country": "Qatar",
       "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/qatar-flag.png",
@@ -495,7 +529,7 @@
       "top_three": []
     },
     {
-      "round_number": 22,
+      "round_number": 23,
       "race_name": "Abu Dhabi Grand Prix",
       "country": "United Arab Emirates",
       "country_flag": "https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/united-arab-emirates-flag.png",
