@@ -154,7 +154,7 @@ export default function Schedule() {
 
                 <div className="p-4 md:max-h-[350px] flex flex-col justify-between">
                   <h3 className="text-2xl font-bold mb-2">
-                    {race.country} GRAND PRIX
+                    {race.race_name} 
                   </h3>
                   <p className="text-gray-800 text-sm mb-4">
                     {race.circuit} Circuit
@@ -228,7 +228,7 @@ export default function Schedule() {
                 Next Race
               </p>
               <h3 className="text-3xl md:text-4xl font-bold mt-1">
-                {nextRace.country} GRAND PRIX
+                {nextRace.race_name}
               </h3>
               <p className="text-gray-400 mt-1">{nextRace.circuit} Circuit</p>
               <p className="text-gray-500 text-sm mt-1">{nextRace.date}</p>
@@ -313,7 +313,7 @@ export default function Schedule() {
 
                       <div className="p-4">
                         <h3 className="text-2xl font-bold mb-2">
-                          {race.country} GRAND PRIX
+                          {race.race_name}
                         </h3>
                         <p className="text-gray-800 text-sm mb-4">
                           {race.circuit} Circuit

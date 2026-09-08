@@ -197,10 +197,10 @@
         },
         {
           "position": 3,
-          "driver_name": "Pierre Gasly",
-          "team": "Alpine",
-          "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/alpine/piegas01/2026alpinepiegas01right.webp",
-          "abbreviation": "GAS"
+          "driver_name": "Isack Hadjar",
+          "team": "Red Bull Racing",
+          "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/redbullracing/isahad01/2026redbullracingisahad01right.webp",
+          "abbreviation": "HAD"
         }
       ]
     },
@@ -417,8 +417,30 @@
       "circuit_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmonzadetailed.webp",
       "date": "2026-09-06",
       "session_name": "Race",
-      "is_completed": false,
-      "top_three": []
+      "is_completed": true,
+      "top_three": [
+        {
+          "position": 2,
+          "driver_name": "George Russell",
+          "team": "Mercedes",
+          "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/mercedes/georus01/2026mercedesgeorus01right.webp",
+          "abbreviation": "RUS"
+        },
+        {
+          "position": 1,
+          "driver_name": "Kimi Antonelli",
+          "team": "Mercedes",
+          "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/mercedes/andant01/2026mercedesandant01right.webp",
+          "abbreviation": "ANT"
+        },
+        {
+          "position": 3,
+          "driver_name": "Max Verstappen",
+          "team": "Red Bull Racing",
+          "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/redbullracing/maxver01/2026redbullracingmaxver01right.webp",
+          "abbreviation": "VER"
+        }
+      ]
     },
     {
       "round_number": 14,
