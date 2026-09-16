@@ -204,7 +204,7 @@ export default function CurrentSession() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="columns-1 md:columns-2 lg:columns-4 xl:columns-5 gap-6 p-4"
+          className="columns-1 md:columns-2 lg:columns-4 gap-6 p-4"
         >
           {driverStandings.map((driver) => (
             <motion.div
