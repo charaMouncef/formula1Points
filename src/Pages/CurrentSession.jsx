@@ -245,13 +245,20 @@ export default function CurrentSession() {
                     <p className="text-sm font-bold">Last 3 Race Results:</p>
                     <ul className="text-xs space-y-1 mt-1">
                       {driver.races.slice(-3).map((race, idx) => (
-                        <li key={idx} className="flex justify-between items-center py-1">
+                        <li
+                          key={idx}
+                          className="flex justify-between items-center py-1"
+                        >
                           <span className="truncate mr-2">{race.event}</span>
-                          <span className="font-semibold">+{race.points} pts</span>
+                          <span className="font-semibold">
+                            +{race.points} pts
+                          </span>
                         </li>
                       ))}
                     </ul>
-                    <p className="text-xs text-gray-400 mt-2">Click again for all results</p>
+                    <p className="text-xs text-gray-400 mt-2">
+                      Click again for all results
+                    </p>
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -279,50 +286,60 @@ export default function CurrentSession() {
                 initial="hidden"
                 animate="visible"
                 exit="exit"
-                className="w-full max-w-md max-h-[90vh] overflow-y-auto bg-white rounded-lg shadow-xl py-2 px-6"
+                className="w-full max-w-md max-h-screen overflow-y-auto bg-white rounded-lg shadow-xl
+                [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']"
                 onClick={(e) => e.stopPropagation()}
                 style={{
                   backgroundColor: `${teamColors[selectDriver.team]}20`,
                   borderLeft: `6px solid ${teamColors[selectDriver.team]}`,
                 }}
               >
-                <div className="flex justify-between items-center sticky top-0 py-2">
-                  <div>
-                    <h3 className="font-bold text-lg">
-                      #{selectDriver.position} / {selectDriver.full_name}
-                    </h3>
-                    <p className="text-sm md:text-base text-gray-600">
-                      {selectDriver.team}
-                    </p>
+                <div
+                  className="sticky top-0 z-10 px-6 pt-2 pb-1"
+                >
+                  <div className="flex justify-between items-center">
+                    <div>
+                      <h3 className="font-bold text-lg">
+                        #{selectDriver.position} / {selectDriver.full_name}
+                      </h3>
+                      <p className="text-sm md:text-base text-white">
+                        {selectDriver.team}
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <span className="font-bold text-lg">
+                        {selectDriver.totalPoints} pts
+                      </span>
+                      <button
+                        onClick={closeModals}
+                        className="cursor-pointer text-red-500 hover:text-red-600 transition-colors"
+                        aria-label="Close modal"
+                      >
+                        <X size={20} />
+                      </button>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <span className="font-bold text-lg">
-                      {selectDriver.totalPoints} pts
-                    </span>
-                    <button
-                      onClick={closeModals}
-                      className="cursor-pointer text-gray-500 hover:text-black transition-colors"
-                      aria-label="Close modal"
-                    >
-                      <X size={20} />
-                    </button>
-                  </div>
+                  <hr className="my-1" />
                 </div>
-                <hr className="my-3" />
-                <div className="mt-4">
+                <div className="px-6 pb-2">
                   <p className="text-sm md:text-base font-bold">
                     All Race Results:
                   </p>
                   <ul className="mt-1 space-y-1">
-                    {selectDriver.races.slice(1).map((race, idx) => (
-                      <li
-                        key={`race-${idx}`}
-                        className="flex justify-between items-center text-xs md:text-sm"
-                      >
-                        <span className="truncate mr-4">{race.event}</span>
-                        <span className="font-semibold">+{race.points} pts</span>
-                      </li>
-                    ))}
+                    {selectDriver.races
+                      .slice(1)
+                      .reverse()
+                      .map((race, idx) => (
+                        <li
+                          key={`race-${idx}`}
+                          className="flex justify-between items-center text-xs md:text-sm"
+                        >
+                          <span className="truncate mr-4">{race.event}</span>
+                          <span className="font-semibold">
+                            +{race.points} pts
+                          </span>
+                        </li>
+                      ))}
                   </ul>
                 </div>
               </motion.div>
@@ -423,13 +440,20 @@ export default function CurrentSession() {
                     <p className="text-sm font-bold">Last 3 Race Results:</p>
                     <ul className="text-xs space-y-1 mt-1">
                       {team.races.slice(-3).map((race, idx) => (
-                        <li key={idx} className="flex justify-between items-center py-1">
+                        <li
+                          key={idx}
+                          className="flex justify-between items-center py-1"
+                        >
                           <span className="truncate mr-2">{race.event}</span>
-                          <span className="font-semibold">+{race.points} pts</span>
+                          <span className="font-semibold">
+                            +{race.points} pts
+                          </span>
                         </li>
                       ))}
                     </ul>
-                    <p className="text-xs text-gray-400 mt-2">Click again for all results</p>
+                    <p className="text-xs text-gray-400 mt-2">
+                      Click again for all results
+                    </p>
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -457,50 +481,60 @@ export default function CurrentSession() {
                 initial="hidden"
                 animate="visible"
                 exit="exit"
-                className="w-full max-w-md max-h-[90vh] overflow-y-auto bg-white rounded-lg shadow-xl py-2 px-6"
+                className="w-full max-w-md max-h-screen overflow-y-auto bg-white rounded-lg shadow-xl
+                [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']"
                 onClick={(e) => e.stopPropagation()}
                 style={{
                   backgroundColor: `${teamColors[selectConstructor.name]}20`,
                   borderLeft: `6px solid ${teamColors[selectConstructor.name]}`,
                 }}
               >
-                <div className="flex justify-between items-center sticky top-0 py-2">
-                  <div>
-                    <h3 className="font-bold text-lg">
-                      #{selectConstructor.position} / {selectConstructor.name}
-                    </h3>
-                    <p className="text-sm md:text-base text-gray-600">
-                      Drivers: {selectConstructor.drivers.join(", ")}
-                    </p>
+                <div
+                  className="sticky top-0 z-10 px-6 pt-2 pb-1"
+                >
+                  <div className="flex justify-between items-center">
+                    <div>
+                      <h3 className="font-bold text-lg">
+                        #{selectConstructor.position} / {selectConstructor.name}
+                      </h3>
+                      <p className="text-sm md:text-base text-white">
+                        Drivers: {selectConstructor.drivers.join(", ")}
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <span className="font-bold text-lg md:text-xl">
+                        {selectConstructor.totalPoints} pts
+                      </span>
+                      <button
+                        onClick={closeModals}
+                        className="cursor-pointer text-red-500 hover:text-red-600 transition-colors"
+                        aria-label="Close modal"
+                      >
+                        <X size={20} />
+                      </button>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <span className="font-bold text-lg md:text-xl">
-                      {selectConstructor.totalPoints} pts
-                    </span>
-                    <button
-                      onClick={closeModals}
-                      className="cursor-pointer text-gray-500 hover:text-black transition-colors"
-                      aria-label="Close modal"
-                    >
-                      <X size={20} />
-                    </button>
-                  </div>
+                  <hr className="mt-1" />
                 </div>
-                <hr className="my-3" />
-                <div>
+                <div className="px-6 pb-2">
                   <p className="text-sm md:text-base font-bold mt-1">
                     All Race Results:
                   </p>
                   <ul className="mt-1 space-y-1">
-                    {selectConstructor.races.map((race, idx) => (
-                      <li
-                        key={`race-${idx}`}
-                        className="flex justify-between items-center text-xs md:text-sm"
-                      >
-                        <span className="truncate mr-4">{race.event}</span>
-                        <span className="font-semibold">+{race.points} pts</span>
-                      </li>
-                    ))}
+                    {selectConstructor.races
+                      .slice(1)
+                      .reverse()
+                      .map((race, idx) => (
+                        <li
+                          key={`race-${idx}`}
+                          className="flex justify-between items-center text-xs md:text-sm"
+                        >
+                          <span className="truncate mr-4">{race.event}</span>
+                          <span className="font-semibold">
+                            +{race.points} pts
+                          </span>
+                        </li>
+                      ))}
                   </ul>
                 </div>
               </motion.div>
