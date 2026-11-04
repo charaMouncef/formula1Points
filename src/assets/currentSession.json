@@ -5220,69 +5220,42 @@
         },
         {
           "Position": 7,
-          "DriverNumber": "81",
-          "FullName": "Oscar Piastri",
-          "Abbreviation": "PIA",
-          "TeamName": "McLaren",
-          "Status": "Finished",
-          "Points": 6
-        },
-        {
-          "Position": 8,
-          "DriverNumber": "43",
-          "FullName": "Franco Colapinto",
-          "Abbreviation": "COL",
-          "TeamName": "Alpine",
-          "Status": "Finished",
-          "Points": 4
-        },
-        {
-          "Position": 9,
           "DriverNumber": "30",
           "FullName": "Liam Lawson",
           "Abbreviation": "LAW",
           "TeamName": "Racing Bulls",
           "Status": "Finished",
-          "Points": 2
+          "Points": 6
         },
         {
-          "Position": 10,
-          "DriverNumber": "10",
-          "FullName": "Pierre Gasly",
-          "Abbreviation": "GAS",
-          "TeamName": "Alpine",
-          "Status": "Finished",
-          "Points": 1
-        },
-        {
-          "Position": 11,
+          "Position": 8,
           "DriverNumber": "5",
           "FullName": "Gabriel Bortoleto",
           "Abbreviation": "BOR",
           "TeamName": "Audi",
           "Status": "Finished",
-          "Points": 0
+          "Points": 4
         },
         {
-          "Position": 12,
+          "Position": 9,
           "DriverNumber": "6",
           "FullName": "Isack Hadjar",
           "Abbreviation": "HAD",
           "TeamName": "Red Bull Racing",
           "Status": "Finished",
-          "Points": 0
+          "Points": 2
         },
         {
-          "Position": 13,
+          "Position": 10,
           "DriverNumber": "50",
           "FullName": "Ryo Hirakawa",
           "Abbreviation": "HIR",
           "TeamName": "Haas F1 Team",
           "Status": "Finished",
-          "Points": 0
+          "Points": 1
         },
         {
-          "Position": 14,
+          "Position": 11,
           "DriverNumber": "23",
           "FullName": "Alexander Albon",
           "Abbreviation": "ALB",
@@ -5291,7 +5264,7 @@
           "Points": 0
         },
         {
-          "Position": 15,
+          "Position": 12,
           "DriverNumber": "55",
           "FullName": "Carlos Sainz",
           "Abbreviation": "SAI",
@@ -5300,7 +5273,16 @@
           "Points": 0
         },
         {
-          "Position": 16,
+          "Position": 13,
+          "DriverNumber": "81",
+          "FullName": "Oscar Piastri",
+          "Abbreviation": "PIA",
+          "TeamName": "McLaren",
+          "Status": "Finished",
+          "Points": 0
+        },
+        {
+          "Position": 14,
           "DriverNumber": "27",
           "FullName": "Nico Hulkenberg",
           "Abbreviation": "HUL",
@@ -5309,11 +5291,29 @@
           "Points": 0
         },
         {
-          "Position": 17,
+          "Position": 15,
+          "DriverNumber": "43",
+          "FullName": "Franco Colapinto",
+          "Abbreviation": "COL",
+          "TeamName": "Alpine",
+          "Status": "Finished",
+          "Points": 0
+        },
+        {
+          "Position": 16,
           "DriverNumber": "11",
           "FullName": "Sergio Perez",
           "Abbreviation": "PER",
           "TeamName": "Cadillac",
+          "Status": "Finished",
+          "Points": 0
+        },
+        {
+          "Position": 17,
+          "DriverNumber": "10",
+          "FullName": "Pierre Gasly",
+          "Abbreviation": "GAS",
+          "TeamName": "Alpine",
           "Status": "Finished",
           "Points": 0
         },
